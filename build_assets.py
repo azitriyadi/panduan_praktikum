@@ -205,22 +205,16 @@ PRAKTIKUM_1_CODE = """# ==========================================
 # Simpan sebagai: praktikum_01.py
 # ==========================================
 
-def evaluasi_kelulusan(kehadiran, nilai):
-    \"\"\"Mengevaluasi status kelulusan mahasiswa.\"\"\"
-    if kehadiran >= 12:
-        if nilai >= 75:
-            return "Status: LULUS - Nilai Memuaskan"
-        else:
-            return "Status: REMEDIAL - Nilai Ujian Kurang"
-    else:
-        return "Status: TIDAK LULUS - Kehadiran Kurang dari 12"
+kehadiran = int(input("Jumlah kehadiran (1-14): "))
+nilai = int(input("Nilai ujian (0-100): "))
 
-# Blok eksekusi utama saat berkas dijalankan langsung
-if __name__ == "__main__":
-    kehadiran = int(input("Jumlah kehadiran (1-14): "))
-    nilai = int(input("Nilai ujian (0-100): "))
-    hasil = evaluasi_kelulusan(kehadiran, nilai)
-    print(hasil)"""
+if kehadiran >= 12:
+    if nilai >= 75:
+        print("LULUS - Nilai Memuaskan")
+    else:
+        print("REMEDIAL - Nilai Ujian Kurang")
+else:
+    print("TIDAK LULUS - Kehadiran Kurang dari 12")"""
 
 PRAKTIKUM_2_CODE = """# ==========================================
 # PRAKTIKUM 2: BILANGAN PRIMA & BREAK
@@ -228,74 +222,67 @@ PRAKTIKUM_2_CODE = """# ==========================================
 # ==========================================
 
 def cek_prima(angka):
-    \"\"\"Memeriksa apakah bilangan bulat positif adalah bilangan prima.\"\"\"
-    if angka < 2:
-        return False
+# Studi Kasus: Uji Bilangan Prima
+angka = int(input("Masukkan angka: "))
+is_prima = True  # Flag penanda
+
+if angka < 2:
+    is_prima = False
+else:
     for pembagi in range(2, angka):
         if angka % pembagi == 0:
-            return False  # Ditemukan pembagi selain 1 dan angka itu sendiri
-    return True
+            is_prima = False  # Ditemukan pembagi selain 1 dan dirinya
+            break             # Hentikan pencarian
 
-# Blok eksekusi utama saat berkas dijalankan langsung
-if __name__ == "__main__":
-    angka = int(input("Masukkan angka bulat positif: "))
-    if cek_prima(angka):
-        print(f"Hasil: {angka} adalah BILANGAN PRIMA")
-    else:
-        print(f"Hasil: {angka} BUKAN bilangan prima")"""
+if is_prima:
+    print(f"{angka} adalah BILANGAN PRIMA")
+else:
+    print(f"{angka} BUKAN bilangan prima")"""
 
 PRAKTIKUM_3_CODE = """# ==========================================
 # PRAKTIKUM 3: DERET ARITMATIKA & AKUMULATOR
 # Simpan sebagai: praktikum_03.py
 # ==========================================
 
-def hitung_deret(awal, beda, banyak):
-    \"\"\"Menghasilkan susunan deret aritmatika dan total akumulasi.\"\"\"
-    suku = awal
-    total = 0
-    deret = []
-    for _ in range(banyak):
-        deret.append(suku)
-        total += suku
-        suku += beda
-    return deret, total
+print("=== PROGRAM HITUNG DERET ARITMATIKA ===")
 
-# Blok eksekusi utama saat berkas dijalankan langsung
-if __name__ == "__main__":
-    awal = int(input("Suku Pertama : "))
-    beda = int(input("Beda Deret   : "))
-    banyak = int(input("Banyak Suku  : "))
-    
-    deret, total = hitung_deret(awal, beda, banyak)
-    print("Susunan Deret: " + " ".join(map(str, deret)))
-    print(f"Total Jumlah Seluruh Deret = {total}")"""
+awal = int(input("Masukkan Suku Pertama (a): "))
+beda = int(input("Masukkan Beda Deret    (b): "))
+
+# 1. IMPLEMENTASI WHILE: Validasi input jumlah suku agar harus positif (> 0)
+banyak = int(input("Masukkan Banyak Suku   (n): "))
+while banyak <= 0:
+    print("Peringatan: Banyak suku harus lebih dari 0!")
+    banyak = int(input("Silakan masukkan ulang Banyak Suku (n): "))
+
+# 2. IMPLEMENTASI FOR & AKUMULATOR: Mencetak deret dan menjumlahkan totalnya
+suku = awal
+total = 0  # Celengan Akumulator
+
+print("\nBarisan Deret: ", end="")
+for i in range(banyak):
+    print(suku, end=" ")
+    total += suku    # Akumulasi penjumlahan bertahap
+    suku += beda     # Menyiapkan suku berikutnya
+
+print(f"\nTotal Jumlah Seluruh Deret = {total}")"""
 
 PRAKTIKUM_4_CODE = """# ==========================================
 # PRAKTIKUM 4: NESTED LOOP & PENGOLAHAN LIST
 # Simpan sebagai: praktikum_04.py
 # ==========================================
 
-def buat_matriks_perkalian(ukuran=3):
-    \"\"\"Mencetak tabel perkalian matriks 2D dengan tabulasi rapi.\"\"\"
-    print(f"--- Tabel Perkalian Matriks (1-{ukuran}) ---")
-    for baris in range(1, ukuran + 1):
-        for kolom in range(1, ukuran + 1):
-            print(f"{baris * kolom}\\t", end="")
-        print()
+for baris in range(1, 4):
+    for kolom in range(1, 4):
+        print(f"{baris}x{kolom}={baris*kolom}", end="\t")
+    print()  # Pindah baris
 
-def analisis_list(daftar_nilai):
-    \"\"\"Menganalisis elemen list dan menentukan nilai tertinggi.\"\"\"
-    print("Seluruh Isi List :", daftar_nilai)
-    print("Data Pertama (0) :", daftar_nilai[0])
-    print("Nilai Tertinggi  :", max(daftar_nilai))
+# 2. Pengenalan List Data Nilai
+nilai_maba = [12, 32-35]
+nilai_maba.append(95)  # Menambah data di akhir
 
-# Blok eksekusi utama saat berkas dijalankan langsung
-if __name__ == "__main__":
-    buat_matriks_perkalian(3)
-    print("\\n--- Pengolahan Data List ---")
-    nilai_maba = [80, 75, 90]
-    nilai_maba.append(95)
-    analisis_list(nilai_maba)"""
+print("Daftar Nilai :", nilai_maba)
+print("Nilai Tertinggi:", max(nilai_maba)))"""
 
 TUGAS_OPERASI3_SKELETON = """# ==========================================
 # TUGAS MANDIRI 1: MODUL FUNGSI MATEMATIKA
