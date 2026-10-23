@@ -528,7 +528,7 @@
           <h3>TATA TERTIB &amp; ATURAN RESMI: DILARANG CURI START!</h3>
           <ul>
             <li><strong>Tombol Salin Ditiadakan:</strong> Kode sengaja disajikan dalam format kartu visual (SVG). Tidak ada tombol salin otomatis agar kalian <em>mengetik ulang secara manual</em> ke VS Code untuk melatih pemahaman dan indentasi.</li>
-            <li><strong>Tugas Mandiri Wajib Integrasi Praktikum 1–4:</strong> Program utama tugas mandiri mengimpor modul praktikum 1–4. Jika praktikum belum selesai, tugas mandiri <em>tidak akan bisa dijalankan</em>.</li>
+            <li><strong>Tugas Mandiri (operasi3.py &amp; kalkulator.py):</strong> Berisi modul fungsi logika matematika mandiri serta aplikasi kalkulator konsol interaktif bermenu yang mengimpor modul tersebut.</li>
             <li><strong>Tunggu Aba-Aba Pemateri:</strong> Buka menu lipat (*drop-down*) hanya saat dipandu oleh dosen/asisten di depan kelas.</li>
           </ul>
         </div>
@@ -688,11 +688,11 @@
       <!-- Section: Tugas Mandiri -->
       <section id="tugas-mandiri" class="section-card" style="border-color: rgba(99, 102, 241, 0.4);">
         <div class="section-header">
-          <div class="section-title"><span>🚀</span> 6. Tugas Mandiri: Dashboard Konsol Terintegrasi</div>
-          <span class="badge-file">operasi3.py &amp; tugas3_menu.py</span>
+          <div class="section-title"><span>🚀</span> 6. Tugas Mandiri: Kalkulator Konsol Bermenu &amp; Modul Operasi</div>
+          <span class="badge-file">operasi3.py &amp; kalkulator.py</span>
         </div>
         <p class="section-desc">
-          <strong style="color: #fca5a5;">Wajib Menyelesaikan Praktikum 1–4!</strong> Program utama <code>tugas3_menu.py</code> mewajibkan integrasi modul seluruh praktikum. Kode jadi tidak diberikan secara langsung; mahasiswa wajib melengkapi logika rumpang sendiri.
+          <strong style="color: #a6e3a1;">Tugas Mandiri:</strong> Terdiri dari 2 berkas, yaitu modul fungsi logika &amp; matematika mandiri (<code>operasi3.py</code>) dan program utama konsol bermenu interaktif (<code>kalkulator.py</code>) yang mengimpor modul tersebut serta mengimplementasikan perulangan <code>while True</code>, validasi input <code>.isdigit()</code>, dan <em>nested loop</em> matriks.
         </p>
 
         <!-- Berkas 1: operasi3.py -->
@@ -700,48 +700,49 @@
           <summary>
             <div class="summary-left">
               <span>📦</span>
-              <span>Berkas 1: Modul Operasi Matematika (<code>operasi3.py</code>)</span>
+              <span>Berkas 1: Modul Logika &amp; Fungsi Matematika (<code>operasi3.py</code>)</span>
             </div>
-            <span class="summary-badge">Kerangka Rumpang</span>
+            <span class="summary-badge">Modul Fungsi</span>
           </summary>
           <div class="details-body">
             <div class="svg-wrapper">
-              <img src="assets/code_operasi3_template.svg" alt="Kerangka operasi3.py">
+              <img src="assets/code_operasi3_template.svg" alt="Modul operasi3.py">
             </div>
             <div class="logic-box">
-              <h4>📋 Spesifikasi Fungsi:</h4>
+              <h4>📋 Spesifikasi Fungsi Mandiri (operasi3.py):</h4>
               <ol>
-                <li><code>hitung_tambah(a, b)</code>: Mengembalikan $a + b$.</li>
-                <li><code>hitung_kurang(a, b)</code>: Mengembalikan $a - b$.</li>
-                <li><code>hitung_kali(a, b)</code>: Mengembalikan $a \times b$.</li>
-                <li><code>hitung_bagi(a, b)</code>: Cek jika $b == 0$, kembalikan <code>"Error: Pembagi tidak boleh bernilai nol"</code>. Jika tidak nol, kembalikan $a / b$.</li>
+                <li><code>tambah(a, b)</code>: Mengembalikan hasil penjumlahan $a + b$.</li>
+                <li><code>kurang(a, b)</code>: Mengembalikan hasil pengurangan $a - b$.</li>
+                <li><code>kali(a, b)</code>: Mengembalikan hasil perkalian $a \times b$.</li>
+                <li><code>bagi(a, b)</code>: Mengembalikan hasil pembagian $a / b$. Menangani pencegahan error saat pembagi bernilai nol (<code>"Error: Pembagi tidak boleh bernilai nol!"</code>).</li>
+                <li><code>cek_ganjil_genap(angka)</code>: Memeriksa sifat bilangan ganjil/genap menggunakan operator modulus (<code>%</code>), mengembalikan <code>"GENAP"</code> atau <code>"GANJIL"</code>.</li>
+                <li><code>hitung_deret_aritmatika(awal, beda, n)</code>: Menghitung total akumulasi deret menggunakan perulangan <code>for</code>.</li>
               </ol>
             </div>
           </div>
         </details>
 
-        <!-- Berkas 2: tugas3_menu.py -->
+        <!-- Berkas 2: kalkulator.py -->
         <details>
           <summary>
             <div class="summary-left">
               <span>💻</span>
-              <span>Berkas 2: Program Dashboard Utama (<code>tugas3_menu.py</code>)</span>
+              <span>Berkas 2: Program Utama Konsol Bermenu (<code>kalkulator.py</code>)</span>
             </div>
-            <span class="summary-badge">Wajib Import 1-4</span>
+            <span class="summary-badge">Program Utama</span>
           </summary>
           <div class="details-body">
             <div class="svg-wrapper">
-              <img src="assets/code_tugas3_menu_template.svg" alt="Kerangka tugas3_menu.py">
+              <img src="assets/code_kalkulator_template.svg" alt="Program kalkulator.py">
             </div>
             <div class="logic-box">
-              <h4>📋 Aturan Integrasi Menu:</h4>
+              <h4>📋 Fitur &amp; Logika Menu (kalkulator.py):</h4>
               <ol>
-                <li><strong>Menu 1:</strong> Meminta input kehadiran &amp; nilai, panggil <code>praktikum_01.evaluasi_kelulusan()</code>.</li>
-                <li><strong>Menu 2:</strong> Meminta input angka, panggil <code>praktikum_02.cek_prima()</code>.</li>
-                <li><strong>Menu 3:</strong> Meminta input awal, beda, banyak, panggil <code>praktikum_03.hitung_deret()</code>.</li>
-                <li><strong>Menu 4:</strong> Panggil <code>praktikum_04.buat_matriks_perkalian(3)</code> &amp; <code>analisis_list()</code>.</li>
-                <li><strong>Menu 5:</strong> Minta input operasi matematika, panggil fungsi di modul <code>operasi3</code>.</li>
-                <li><strong>Menu 0:</strong> Keluar program dengan <code>break</code>.</li>
+                <li><strong>Menu 1 (Operasi Aritmatika Dasar):</strong> Sub-menu A (+), B (-), C (*), D (/), validasi input menggunakan <code>.isdigit()</code>, memanggil fungsi dari modul <code>operasi3</code>.</li>
+                <li><strong>Menu 2 (Cek Sifat Bilangan):</strong> Meminta input angka positif dan memanggil <code>operasi3.cek_ganjil_genap(angka)</code>.</li>
+                <li><strong>Menu 3 (Hitung Deret Aritmatika):</strong> Meminta input suku awal, beda, dan banyak suku ($n$), validasi <code>while n &lt;= 0</code>, memanggil <code>operasi3.hitung_deret_aritmatika()</code>.</li>
+                <li><strong>Menu 4 (Cetak Tabel Perkalian Matriks):</strong> Mencetak matriks perkalian 1–3 menggunakan <em>nested loop</em> (loop baris dan kolom).</li>
+                <li><strong>Menu 5 (Keluar):</strong> Menampilkan pesan terima kasih dan menghentikan perulangan dengan <code>break</code>.</li>
               </ol>
             </div>
           </div>
@@ -769,15 +770,31 @@
           </div>
 
           <div class="step-item">
-            <div class="step-title"><span>3️⃣</span> Buat Folder Format <code>nama-NPM</code></div>
-            <div class="step-desc">Buat direktori kerja pribadi dan letakkan seluruh berkas tugas di dalamnya:</div>
+            <div class="step-title"><span>3️⃣</span> Buat Folder Format <code>nama-NPM</code> &amp; Berkas <code>README.md</code></div>
+            <div class="step-desc">Buat direktori kerja pribadi dan buat berkas <code>README.md</code> dengan format wajib:</div>
             <div class="code-snippet">mkdir ahmad-2610001<br>cd ahmad-2610001</div>
+            <div style="margin-top: 10px; background: #11111b; border: 1px solid #313244; border-radius: 8px; padding: 12px; font-size: 12px; color: #cdd6f4;">
+              <strong style="color: #89b4fa;">📝 Format Isi README.md Mahasiswa:</strong>
+              <pre style="margin: 8px 0 0; color: #a6adc8; font-family: monospace; line-height: 1.5;"># Tugas Minggu 2 - Pelatihan Python Lanjutan &amp; GitHub
+
+- **Nama**     : [Nama Lengkap]
+- **NPM**      : [NPM Mahasiswa]
+- **Kelompok** : [Nomor Kelompok]
+
+## Daftar Berkas
+1. `praktikum_01.py` : Latihan Percabangan Bertingkat (Nested If)
+2. `praktikum_02.py` : Latihan Deteksi Bilangan Prima &amp; Modulus
+3. `praktikum_03.py` : Latihan Deret Aritmatika &amp; Akumulator
+4. `praktikum_04.py` : Latihan Matriks Perkalian &amp; List
+5. `operasi3.py`     : Modul Operasi Matematika
+6. `tugas3_menu.py`  : Aplikasi Konsol Utama Kalkulator</pre>
+            </div>
           </div>
 
           <div class="step-item">
             <div class="step-title"><span>4️⃣</span> Minimal 3 Kali Commit Bertahap</div>
             <div class="step-desc">Disiplin riwayat commit bertahap (*atomic commits*):</div>
-            <div class="code-snippet">git add praktikum_*.py<br>git commit -m "feat: menyelesaikan modul latihan praktikum 1 sampai 4"<br><br>git add operasi3.py tugas3_menu.py<br>git commit -m "feat: menyelesaikan modul kalkulator dan program menu terpadu"<br><br>git add README.md .gitignore<br>git commit -m "docs: melengkapi dokumentasi dan konfigurasi gitignore"</div>
+            <div class="code-snippet">git add praktikum_*.py<br>git commit -m "feat: menyelesaikan modul latihan praktikum 1 sampai 4"<br><br>git add operasi3.py kalkulator.py<br>git commit -m "feat: menyelesaikan modul kalkulator dan program menu terpadu"<br><br>git add README.md .gitignore<br>git commit -m "docs: melengkapi dokumentasi dan konfigurasi gitignore"</div>
           </div>
 
           <div class="step-item">

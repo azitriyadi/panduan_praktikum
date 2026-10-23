@@ -17,7 +17,7 @@ Seluruh instruksi detail, materi, dan kode sumber latihan telah disiapkan dalam 
 > [!CAUTION]
 > ### 🛑 TATA TERTIB & PERINGATAN RESMI: DILARANG CURI START!
 > 1. **Tombol Salin Ditiadakan**: Seluruh kode latihan disajikan dalam bentuk **Visual Code Card (SVG)** tanpa tombol salin (*copy button*) bawaan. Mahasiswa **wajib mengetik ulang secara mandiri (*muscle memory*)** ke dalam teks editor VS Code.
-> 2. **Tugas Mandiri Wajib Menyelesaikan Praktikum 1–4**: Tugas mandiri (`tugas3_menu.py`) adalah **Aplikasi Dashboard Terpadu** yang mengimpor (`import`) modul dari Praktikum 1, 2, 3, dan 4. Mahasiswa **tidak bisa curi start** mengerjakan tugas mandiri sebelum seluruh berkas praktikum selesai!
+> 2. **Tugas Mandiri (operasi3.py & kalkulator.py)**: Terdiri dari modul logika fungsi matematika mandiri (`operasi3.py`) dan aplikasi kalkulator konsol bermenu interaktif (`kalkulator.py`).
 > 3. **Tunggu Aba-Aba**: Buka menu lipat (*drop-down*) hanya jika telah diinstruksikan secara resmi oleh pemateri di depan kelas.
 > 4. **Pahami Analogi & Alur Logika**: Pahami alur berpikir komputasional dan penataan indentasi 4 spasi pada Python.
 
@@ -31,8 +31,8 @@ Seluruh instruksi detail, materi, dan kode sumber latihan telah disiapkan dalam 
 | 2 | **Praktikum 2** | `praktikum_02.py` | Pengujian Bilangan Prima, Operator Modulus (`%`), dan Berhenti Cepat |
 | 3 | **Praktikum 3** | `praktikum_03.py` | Deret Aritmatika & Akumulator Nilai (Pengembalian *Tuple*) |
 | 4 | **Praktikum 4** | `praktikum_04.py` | Matriks 2D (*Nested Loop*) & Analisis Statistik Wadah `list` |
-| 5 | **Tugas Mandiri 1** | `operasi3.py` | Modul Fungsi Matematika Kustom (Tambah, Kurang, Kali, Bagi) |
-| 6 | **Tugas Mandiri 2** | `tugas3_menu.py` | **Dashboard Menu Terpadu (Wajib Integrasi Praktikum 1–4 & Modul 1)** |
+| 5 | **Tugas Mandiri 1** | `operasi3.py` | Modul Logika & Fungsi Matematika Mandiri (+, -, *, /, Modulus, Deret) |
+| 6 | **Tugas Mandiri 2** | `kalkulator.py` | **Aplikasi Kalkulator Konsol Bermenu (While True, Nested Loop, .isdigit)** |
 
 ---
 
@@ -49,12 +49,32 @@ tugas-minggu-2/
     ├── praktikum_02.py        <-- Latihan Prima & Modulus
     ├── praktikum_03.py        <-- Latihan Deret & Akumulator
     ├── praktikum_04.py        <-- Latihan Matriks & List
-    ├── operasi3.py            <-- Modul Fungsi Matematika (Tugas Mandiri)
-    └── tugas3_menu.py         <-- Program Utama Menu Konsol (Tugas Mandiri)
+    ├── operasi3.py            <-- Modul Logika & Fungsi Matematika (Tugas Mandiri 1)
+    └── tugas3_menu.py         <-- Program Utama Kalkulator Bermenu (Tugas Mandiri 2)
 ```
 
 > [!IMPORTANT]
 > Pastikan struktur penamaan berkas persis seperti di atas untuk memudahkan verifikasi otomatis dan penilaian oleh tim pengajar.
+
+### 📝 Format Wajib Isi `README.md` Mahasiswa
+
+Setiap mahasiswa wajib mengisi berkas `README.md` di dalam folder kerjanya dengan format berikut:
+
+```markdown
+# Tugas Minggu 2 - Pelatihan Python Lanjutan & GitHub
+
+- **Nama**     : [Nama Lengkap]
+- **NPM**      : [NPM Mahasiswa]
+- **Kelompok** : [Nomor Kelompok]
+
+## Daftar Berkas
+1. `praktikum_01.py` : Latihan Percabangan Bertingkat (Nested If)
+2. `praktikum_02.py` : Latihan Deteksi Bilangan Prima & Modulus
+3. `praktikum_03.py` : Latihan Deret Aritmatika & Akumulator
+4. `praktikum_04.py` : Latihan Matriks Perkalian & List
+5. `operasi3.py`     : Modul Operasi Matematika
+6. `tugas3_menu.py`  : Aplikasi Konsol Utama Kalkulator
+```
 
 ---
 
@@ -92,7 +112,7 @@ python praktikum_03.py
 python praktikum_04.py
 
 # Menjalankan Program Tugas Mandiri
-python tugas3_menu.py
+python kalkulator.py
 ```
 
 ---

@@ -1,107 +1,255 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 820 1092" width="100%" height="1092" style="max-width: 820px; border-radius: 10px; font-family: Consolas, 'Cascadia Code', 'Fira Code', monospace;">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 820 2720" width="100%" height="2720" style="max-width: 820px; border-radius: 10px; font-family: Consolas, 'Cascadia Code', 'Fira Code', monospace;">
   <!-- Window Background -->
-  <rect width="820" height="1092" rx="10" fill="#181825" stroke="#313244" stroke-width="1.5"/>
-  <rect y="42" width="820" height="1050" fill="#1e1e2e"/>
+  <rect width="820" height="2720" rx="10" fill="#181825" stroke="#313244" stroke-width="1.5"/>
+  <rect y="42" width="820" height="2678" fill="#1e1e2e"/>
   <!-- Header Bar -->
   <path d="M 0 10 Q 0 0 10 0 L 810 0 Q 820 0 820 10 L 820 42 L 0 42 Z" fill="#11111b" stroke="#313244" stroke-width="1"/>
   <circle cx="20" cy="21" r="6" fill="#f38ba8"/>
   <circle cx="38" cy="21" r="6" fill="#f9e2af"/>
   <circle cx="56" cy="21" r="6" fill="#a6e3a1"/>
-  <text x="78" y="26" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="600" fill="#cdd6f4">tugas3_menu.py (Kerangka Integrasi)</text>
+  <text x="78" y="26" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="600" fill="#cdd6f4">tugas3_menu.py</text>
   <!-- Anti Copy Badge -->
   <rect x="585" y="9" width="220" height="24" rx="12" fill="#f38ba8" fill-opacity="0.12" stroke="#f38ba8" stroke-width="1" stroke-opacity="0.5"/>
-  <text x="695" y="25" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="11.5" font-weight="600" fill="#f38ba8">✍️ Wajib Integrasi Praktikum 1-4</text>
-  <line x1="52" y1="42" x2="52" y2="1092" stroke="#313244" stroke-width="1"/>
+  <text x="695" y="25" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="11.5" font-weight="600" fill="#f38ba8">✍️ Tugas Mandiri 2 • Aplikasi Kalkulator</text>
+  <line x1="52" y1="42" x2="52" y2="2720" stroke="#313244" stroke-width="1"/>
   <text x="40" y="77" text-anchor="end" font-size="12" fill="#585b70" font-weight="normal">1</text>
-  <text x="65" y="77" font-size="13" xml:space="preserve"><tspan fill="#9399b2" font-style="italic"># ==========================================</tspan></text>
+  <text x="65" y="77" font-size="13" xml:space="preserve"><tspan fill="#9399b2" font-style="italic"># ==============================================================================</tspan></text>
   <text x="40" y="99" text-anchor="end" font-size="12" fill="#585b70" font-weight="normal">2</text>
-  <text x="65" y="99" font-size="13" xml:space="preserve"><tspan fill="#9399b2" font-style="italic"># TUGAS MANDIRI 2: DASHBOARD MENU TERPADU</tspan></text>
+  <text x="65" y="99" font-size="13" xml:space="preserve"><tspan fill="#9399b2" font-style="italic"># PROGRAM UTAMA: kalkulator.py</tspan></text>
   <text x="40" y="121" text-anchor="end" font-size="12" fill="#585b70" font-weight="normal">3</text>
-  <text x="65" y="121" font-size="13" xml:space="preserve"><tspan fill="#9399b2" font-style="italic"># Berkas: tugas3_menu.py (WAJIB DILENGKAPI SENDIRI)</tspan></text>
+  <text x="65" y="121" font-size="13" xml:space="preserve"><tspan fill="#9399b2" font-style="italic"># Aplikasi Kalkulator Konsol Bermenu Interaktif</tspan></text>
   <text x="40" y="143" text-anchor="end" font-size="12" fill="#585b70" font-weight="normal">4</text>
-  <text x="65" y="143" font-size="13" xml:space="preserve"><tspan fill="#9399b2" font-style="italic"># ==========================================</tspan></text>
+  <text x="65" y="143" font-size="13" xml:space="preserve"><tspan fill="#9399b2" font-style="italic"># ==============================================================================</tspan></text>
   <text x="40" y="165" text-anchor="end" font-size="12" fill="#585b70" font-weight="normal">5</text>
-  <text x="65" y="165" font-size="13" fill="#cdd6f4" xml:space="preserve"></text>
+  <text x="65" y="165" font-size="13" xml:space="preserve"><tspan fill="#cba6f7" font-weight="bold">import</tspan> <tspan fill="#cdd6f4">operasi3</tspan>  <tspan fill="#9399b2" font-style="italic"># Memanggil modul fungsi terpisah</tspan></text>
   <text x="40" y="187" text-anchor="end" font-size="12" fill="#585b70" font-weight="normal">6</text>
-  <text x="65" y="187" font-size="13" xml:space="preserve"><tspan fill="#9399b2" font-style="italic"># SYARAT WAJIB: Seluruh modul praktikum 1-4 &amp; operasi3 HARUS sudah selesai!</tspan></text>
+  <text x="65" y="187" font-size="13" fill="#cdd6f4" xml:space="preserve"></text>
   <text x="40" y="209" text-anchor="end" font-size="12" fill="#585b70" font-weight="normal">7</text>
-  <text x="65" y="209" font-size="13" xml:space="preserve"><tspan fill="#cba6f7" font-weight="bold">import</tspan> <tspan fill="#cdd6f4">praktikum_01</tspan></text>
+  <text x="65" y="209" font-size="13" xml:space="preserve"><tspan fill="#cba6f7" font-weight="bold">while</tspan> <tspan fill="#cba6f7" font-weight="bold">True</tspan><tspan fill="#89dceb">:</tspan></text>
   <text x="40" y="231" text-anchor="end" font-size="12" fill="#585b70" font-weight="normal">8</text>
-  <text x="65" y="231" font-size="13" xml:space="preserve"><tspan fill="#cba6f7" font-weight="bold">import</tspan> <tspan fill="#cdd6f4">praktikum_02</tspan></text>
+  <text x="65" y="231" font-size="13" xml:space="preserve"><tspan fill="#cdd6f4">    </tspan><tspan fill="#89b4fa">print</tspan><tspan fill="#89dceb">(</tspan><tspan fill="#a6e3a1">&quot;\n&quot;</tspan> <tspan fill="#89dceb">+</tspan> <tspan fill="#a6e3a1">&quot;=&quot;</tspan> <tspan fill="#89dceb">*</tspan> <tspan fill="#fab387">45</tspan><tspan fill="#89dceb">)</tspan></text>
   <text x="40" y="253" text-anchor="end" font-size="12" fill="#585b70" font-weight="normal">9</text>
-  <text x="65" y="253" font-size="13" xml:space="preserve"><tspan fill="#cba6f7" font-weight="bold">import</tspan> <tspan fill="#cdd6f4">praktikum_03</tspan></text>
+  <text x="65" y="253" font-size="13" xml:space="preserve">    <tspan fill="#89b4fa">print</tspan><tspan fill="#89dceb">(</tspan><tspan fill="#a6e3a1">&quot;        APLIKASI KALKULATOR KONSOL&quot;</tspan><tspan fill="#89dceb">)</tspan></text>
   <text x="40" y="275" text-anchor="end" font-size="12" fill="#585b70" font-weight="normal">10</text>
-  <text x="65" y="275" font-size="13" xml:space="preserve"><tspan fill="#cba6f7" font-weight="bold">import</tspan> <tspan fill="#cdd6f4">praktikum_04</tspan></text>
+  <text x="65" y="275" font-size="13" xml:space="preserve">    <tspan fill="#89b4fa">print</tspan><tspan fill="#89dceb">(</tspan><tspan fill="#a6e3a1">&quot;=&quot;</tspan> <tspan fill="#89dceb">*</tspan> <tspan fill="#fab387">45</tspan><tspan fill="#89dceb">)</tspan></text>
   <text x="40" y="297" text-anchor="end" font-size="12" fill="#585b70" font-weight="normal">11</text>
-  <text x="65" y="297" font-size="13" xml:space="preserve"><tspan fill="#cba6f7" font-weight="bold">import</tspan> <tspan fill="#cdd6f4">operasi3</tspan></text>
+  <text x="65" y="297" font-size="13" xml:space="preserve">    <tspan fill="#89b4fa">print</tspan><tspan fill="#89dceb">(</tspan><tspan fill="#a6e3a1">&quot;1. Operasi Aritmatika Dasar (+, -, *, /)&quot;</tspan><tspan fill="#89dceb">)</tspan></text>
   <text x="40" y="319" text-anchor="end" font-size="12" fill="#585b70" font-weight="normal">12</text>
-  <text x="65" y="319" font-size="13" fill="#cdd6f4" xml:space="preserve"></text>
+  <text x="65" y="319" font-size="13" xml:space="preserve">    <tspan fill="#89b4fa">print</tspan><tspan fill="#89dceb">(</tspan><tspan fill="#a6e3a1">&quot;2. Cek Sifat Bilangan (Ganjil / Genap)&quot;</tspan><tspan fill="#89dceb">)</tspan></text>
   <text x="40" y="341" text-anchor="end" font-size="12" fill="#585b70" font-weight="normal">13</text>
-  <text x="65" y="341" font-size="13" xml:space="preserve"><tspan fill="#cba6f7" font-weight="bold">while</tspan> <tspan fill="#cba6f7" font-weight="bold">True</tspan><tspan fill="#89dceb">:</tspan></text>
+  <text x="65" y="341" font-size="13" xml:space="preserve">    <tspan fill="#89b4fa">print</tspan><tspan fill="#89dceb">(</tspan><tspan fill="#a6e3a1">&quot;3. Hitung Deret Aritmatika (For &amp; Akumulator)&quot;</tspan><tspan fill="#89dceb">)</tspan></text>
   <text x="40" y="363" text-anchor="end" font-size="12" fill="#585b70" font-weight="normal">14</text>
-  <text x="65" y="363" font-size="13" xml:space="preserve"><tspan fill="#cdd6f4">    </tspan><tspan fill="#89b4fa">print</tspan><tspan fill="#89dceb">(</tspan><tspan fill="#a6e3a1">&quot;\n&quot;</tspan> <tspan fill="#89dceb">+</tspan> <tspan fill="#a6e3a1">&quot;=&quot;</tspan> <tspan fill="#89dceb">*</tspan> <tspan fill="#fab387">48</tspan><tspan fill="#89dceb">)</tspan></text>
+  <text x="65" y="363" font-size="13" xml:space="preserve">    <tspan fill="#89b4fa">print</tspan><tspan fill="#89dceb">(</tspan><tspan fill="#a6e3a1">&quot;4. Cetak Tabel Perkalian Matriks (Nested Loop)&quot;</tspan><tspan fill="#89dceb">)</tspan></text>
   <text x="40" y="385" text-anchor="end" font-size="12" fill="#585b70" font-weight="normal">15</text>
-  <text x="65" y="385" font-size="13" xml:space="preserve">    <tspan fill="#89b4fa">print</tspan><tspan fill="#89dceb">(</tspan><tspan fill="#a6e3a1">&quot;   APLIKASI TERPADU PRAKTIKUM &amp; KALKULATOR&quot;</tspan><tspan fill="#89dceb">)</tspan></text>
+  <text x="65" y="385" font-size="13" xml:space="preserve">    <tspan fill="#89b4fa">print</tspan><tspan fill="#89dceb">(</tspan><tspan fill="#a6e3a1">&quot;5. Keluar&quot;</tspan><tspan fill="#89dceb">)</tspan></text>
   <text x="40" y="407" text-anchor="end" font-size="12" fill="#585b70" font-weight="normal">16</text>
-  <text x="65" y="407" font-size="13" xml:space="preserve">    <tspan fill="#89b4fa">print</tspan><tspan fill="#89dceb">(</tspan><tspan fill="#a6e3a1">&quot;=&quot;</tspan> <tspan fill="#89dceb">*</tspan> <tspan fill="#fab387">48</tspan><tspan fill="#89dceb">)</tspan></text>
+  <text x="65" y="407" font-size="13" xml:space="preserve">    <tspan fill="#89b4fa">print</tspan><tspan fill="#89dceb">(</tspan><tspan fill="#a6e3a1">&quot;=&quot;</tspan> <tspan fill="#89dceb">*</tspan> <tspan fill="#fab387">45</tspan><tspan fill="#89dceb">)</tspan></text>
   <text x="40" y="429" text-anchor="end" font-size="12" fill="#585b70" font-weight="normal">17</text>
-  <text x="65" y="429" font-size="13" xml:space="preserve">    <tspan fill="#89b4fa">print</tspan><tspan fill="#89dceb">(</tspan><tspan fill="#a6e3a1">&quot;1. Evaluasi Kelulusan Mahasiswa (Praktikum 1)&quot;</tspan><tspan fill="#89dceb">)</tspan></text>
+  <text x="65" y="429" font-size="13" fill="#cdd6f4" xml:space="preserve"></text>
   <text x="40" y="451" text-anchor="end" font-size="12" fill="#585b70" font-weight="normal">18</text>
-  <text x="65" y="451" font-size="13" xml:space="preserve">    <tspan fill="#89b4fa">print</tspan><tspan fill="#89dceb">(</tspan><tspan fill="#a6e3a1">&quot;2. Uji Bilangan Prima (Praktikum 2)&quot;</tspan><tspan fill="#89dceb">)</tspan></text>
+  <text x="65" y="451" font-size="13" xml:space="preserve">    <tspan fill="#cdd6f4">pilihan</tspan> <tspan fill="#89dceb">=</tspan> <tspan fill="#89b4fa">input</tspan><tspan fill="#89dceb">(</tspan><tspan fill="#a6e3a1">&quot;Pilih menu (1-5): &quot;</tspan><tspan fill="#89dceb">)</tspan></text>
   <text x="40" y="473" text-anchor="end" font-size="12" fill="#585b70" font-weight="normal">19</text>
-  <text x="65" y="473" font-size="13" xml:space="preserve">    <tspan fill="#89b4fa">print</tspan><tspan fill="#89dceb">(</tspan><tspan fill="#a6e3a1">&quot;3. Hitung Deret Aritmatika &amp; Total (Praktikum 3)&quot;</tspan><tspan fill="#89dceb">)</tspan></text>
+  <text x="65" y="473" font-size="13" fill="#cdd6f4" xml:space="preserve"></text>
   <text x="40" y="495" text-anchor="end" font-size="12" fill="#585b70" font-weight="normal">20</text>
-  <text x="65" y="495" font-size="13" xml:space="preserve">    <tspan fill="#89b4fa">print</tspan><tspan fill="#89dceb">(</tspan><tspan fill="#a6e3a1">&quot;4. Matriks Perkalian &amp; Statistik List (Praktikum 4)&quot;</tspan><tspan fill="#89dceb">)</tspan></text>
+  <text x="65" y="495" font-size="13" xml:space="preserve">    <tspan fill="#9399b2" font-style="italic"># ----------------------------------------------------</tspan></text>
   <text x="40" y="517" text-anchor="end" font-size="12" fill="#585b70" font-weight="normal">21</text>
-  <text x="65" y="517" font-size="13" xml:space="preserve">    <tspan fill="#89b4fa">print</tspan><tspan fill="#89dceb">(</tspan><tspan fill="#a6e3a1">&quot;5. Kalkulator Operasi Matematika (Modul operasi3)&quot;</tspan><tspan fill="#89dceb">)</tspan></text>
+  <text x="65" y="517" font-size="13" xml:space="preserve">    <tspan fill="#9399b2" font-style="italic"># MENU 5: KELUAR PROGRAM</tspan></text>
   <text x="40" y="539" text-anchor="end" font-size="12" fill="#585b70" font-weight="normal">22</text>
-  <text x="65" y="539" font-size="13" xml:space="preserve">    <tspan fill="#89b4fa">print</tspan><tspan fill="#89dceb">(</tspan><tspan fill="#a6e3a1">&quot;0. Keluar dari Program&quot;</tspan><tspan fill="#89dceb">)</tspan></text>
+  <text x="65" y="539" font-size="13" xml:space="preserve">    <tspan fill="#9399b2" font-style="italic"># ----------------------------------------------------</tspan></text>
   <text x="40" y="561" text-anchor="end" font-size="12" fill="#585b70" font-weight="normal">23</text>
-  <text x="65" y="561" font-size="13" xml:space="preserve">    <tspan fill="#89b4fa">print</tspan><tspan fill="#89dceb">(</tspan><tspan fill="#a6e3a1">&quot;=&quot;</tspan> <tspan fill="#89dceb">*</tspan> <tspan fill="#fab387">48</tspan><tspan fill="#89dceb">)</tspan></text>
+  <text x="65" y="561" font-size="13" xml:space="preserve">    <tspan fill="#cba6f7" font-weight="bold">if</tspan> <tspan fill="#cdd6f4">pilihan</tspan> <tspan fill="#89dceb">==</tspan> <tspan fill="#a6e3a1">&quot;5&quot;</tspan><tspan fill="#89dceb">:</tspan></text>
   <text x="40" y="583" text-anchor="end" font-size="12" fill="#585b70" font-weight="normal">24</text>
-  <text x="65" y="583" font-size="13" fill="#cdd6f4" xml:space="preserve">    </text>
+  <text x="65" y="583" font-size="13" xml:space="preserve"><tspan fill="#cdd6f4">        </tspan><tspan fill="#89b4fa">print</tspan><tspan fill="#89dceb">(</tspan><tspan fill="#a6e3a1">&quot;\nTerima kasih telah menggunakan Kalkulator Konsol. Program selesai!&quot;</tspan><tspan fill="#89dceb">)</tspan></text>
   <text x="40" y="605" text-anchor="end" font-size="12" fill="#585b70" font-weight="normal">25</text>
-  <text x="65" y="605" font-size="13" xml:space="preserve">    <tspan fill="#cdd6f4">pilihan</tspan> <tspan fill="#89dceb">=</tspan> <tspan fill="#89b4fa">input</tspan><tspan fill="#89dceb">(</tspan><tspan fill="#a6e3a1">&quot;Pilih Menu (0-5): &quot;</tspan><tspan fill="#89dceb">)</tspan></text>
+  <text x="65" y="605" font-size="13" xml:space="preserve">        <tspan fill="#cba6f7" font-weight="bold">break</tspan></text>
   <text x="40" y="627" text-anchor="end" font-size="12" fill="#585b70" font-weight="normal">26</text>
-  <text x="65" y="627" font-size="13" fill="#cdd6f4" xml:space="preserve">    </text>
+  <text x="65" y="627" font-size="13" fill="#cdd6f4" xml:space="preserve"></text>
   <text x="40" y="649" text-anchor="end" font-size="12" fill="#585b70" font-weight="normal">27</text>
-  <text x="65" y="649" font-size="13" xml:space="preserve">    <tspan fill="#cba6f7" font-weight="bold">if</tspan> <tspan fill="#cdd6f4">pilihan</tspan> <tspan fill="#89dceb">==</tspan> <tspan fill="#a6e3a1">&quot;0&quot;</tspan><tspan fill="#89dceb">:</tspan></text>
+  <text x="65" y="649" font-size="13" xml:space="preserve">    <tspan fill="#9399b2" font-style="italic"># ----------------------------------------------------</tspan></text>
   <text x="40" y="671" text-anchor="end" font-size="12" fill="#585b70" font-weight="normal">28</text>
-  <text x="65" y="671" font-size="13" xml:space="preserve"><tspan fill="#cdd6f4">        </tspan><tspan fill="#89b4fa">print</tspan><tspan fill="#89dceb">(</tspan><tspan fill="#a6e3a1">&quot;Terima kasih! Sampai jumpa di praktikum berikutnya.&quot;</tspan><tspan fill="#89dceb">)</tspan></text>
+  <text x="65" y="671" font-size="13" xml:space="preserve">    <tspan fill="#9399b2" font-style="italic"># MENU 1: OPERASI ARITMATIKA DASAR (+, -, *, /)</tspan></text>
   <text x="40" y="693" text-anchor="end" font-size="12" fill="#585b70" font-weight="normal">29</text>
-  <text x="65" y="693" font-size="13" xml:space="preserve">        <tspan fill="#cba6f7" font-weight="bold">break</tspan></text>
+  <text x="65" y="693" font-size="13" xml:space="preserve">    <tspan fill="#9399b2" font-style="italic"># ----------------------------------------------------</tspan></text>
   <text x="40" y="715" text-anchor="end" font-size="12" fill="#585b70" font-weight="normal">30</text>
   <text x="65" y="715" font-size="13" xml:space="preserve">    <tspan fill="#cdd6f4"></tspan><tspan fill="#cba6f7" font-weight="bold">elif</tspan> <tspan fill="#cdd6f4">pilihan</tspan> <tspan fill="#89dceb">==</tspan> <tspan fill="#a6e3a1">&quot;1&quot;</tspan><tspan fill="#89dceb">:</tspan></text>
   <text x="40" y="737" text-anchor="end" font-size="12" fill="#585b70" font-weight="normal">31</text>
-  <text x="65" y="737" font-size="13" xml:space="preserve">        <tspan fill="#9399b2" font-style="italic"># TODO: Minta input kehadiran &amp; nilai, panggil praktikum_01.evaluasi_kelulusan()</tspan></text>
+  <text x="65" y="737" font-size="13" xml:space="preserve"><tspan fill="#cdd6f4">        </tspan><tspan fill="#89b4fa">print</tspan><tspan fill="#89dceb">(</tspan><tspan fill="#a6e3a1">&quot;\n--- Sub-Menu Operasi Dasar ---&quot;</tspan><tspan fill="#89dceb">)</tspan></text>
   <text x="40" y="759" text-anchor="end" font-size="12" fill="#585b70" font-weight="normal">32</text>
-  <text x="65" y="759" font-size="13" xml:space="preserve"><tspan fill="#cdd6f4">        </tspan><tspan fill="#cba6f7" font-weight="bold">pass</tspan></text>
+  <text x="65" y="759" font-size="13" xml:space="preserve">        <tspan fill="#89b4fa">print</tspan><tspan fill="#89dceb">(</tspan><tspan fill="#a6e3a1">&quot;A. Penjumlahan (+)&quot;</tspan><tspan fill="#89dceb">)</tspan></text>
   <text x="40" y="781" text-anchor="end" font-size="12" fill="#585b70" font-weight="normal">33</text>
-  <text x="65" y="781" font-size="13" xml:space="preserve">    <tspan fill="#cdd6f4"></tspan><tspan fill="#cba6f7" font-weight="bold">elif</tspan> <tspan fill="#cdd6f4">pilihan</tspan> <tspan fill="#89dceb">==</tspan> <tspan fill="#a6e3a1">&quot;2&quot;</tspan><tspan fill="#89dceb">:</tspan></text>
+  <text x="65" y="781" font-size="13" xml:space="preserve">        <tspan fill="#89b4fa">print</tspan><tspan fill="#89dceb">(</tspan><tspan fill="#a6e3a1">&quot;B. Pengurangan (-)&quot;</tspan><tspan fill="#89dceb">)</tspan></text>
   <text x="40" y="803" text-anchor="end" font-size="12" fill="#585b70" font-weight="normal">34</text>
-  <text x="65" y="803" font-size="13" xml:space="preserve">        <tspan fill="#9399b2" font-style="italic"># TODO: Minta input angka, panggil praktikum_02.cek_prima()</tspan></text>
+  <text x="65" y="803" font-size="13" xml:space="preserve">        <tspan fill="#89b4fa">print</tspan><tspan fill="#89dceb">(</tspan><tspan fill="#a6e3a1">&quot;C. Perkalian   (*)&quot;</tspan><tspan fill="#89dceb">)</tspan></text>
   <text x="40" y="825" text-anchor="end" font-size="12" fill="#585b70" font-weight="normal">35</text>
-  <text x="65" y="825" font-size="13" xml:space="preserve"><tspan fill="#cdd6f4">        </tspan><tspan fill="#cba6f7" font-weight="bold">pass</tspan></text>
+  <text x="65" y="825" font-size="13" xml:space="preserve">        <tspan fill="#89b4fa">print</tspan><tspan fill="#89dceb">(</tspan><tspan fill="#a6e3a1">&quot;D. Pembagian   (/)&quot;</tspan><tspan fill="#89dceb">)</tspan></text>
   <text x="40" y="847" text-anchor="end" font-size="12" fill="#585b70" font-weight="normal">36</text>
-  <text x="65" y="847" font-size="13" xml:space="preserve">    <tspan fill="#cdd6f4"></tspan><tspan fill="#cba6f7" font-weight="bold">elif</tspan> <tspan fill="#cdd6f4">pilihan</tspan> <tspan fill="#89dceb">==</tspan> <tspan fill="#a6e3a1">&quot;3&quot;</tspan><tspan fill="#89dceb">:</tspan></text>
+  <text x="65" y="847" font-size="13" fill="#cdd6f4" xml:space="preserve">        </text>
   <text x="40" y="869" text-anchor="end" font-size="12" fill="#585b70" font-weight="normal">37</text>
-  <text x="65" y="869" font-size="13" xml:space="preserve">        <tspan fill="#9399b2" font-style="italic"># TODO: Minta input awal, beda, banyak, panggil praktikum_03.hitung_deret()</tspan></text>
+  <text x="65" y="869" font-size="13" xml:space="preserve">        <tspan fill="#cdd6f4">op</tspan> <tspan fill="#89dceb">=</tspan> <tspan fill="#89b4fa">input</tspan><tspan fill="#89dceb">(</tspan><tspan fill="#a6e3a1">&quot;Pilih operasi (A/B/C/D): &quot;</tspan><tspan fill="#89dceb">)</tspan><tspan fill="#89dceb">.</tspan><tspan fill="#cdd6f4">upper</tspan><tspan fill="#89dceb">(</tspan><tspan fill="#89dceb">)</tspan></text>
   <text x="40" y="891" text-anchor="end" font-size="12" fill="#585b70" font-weight="normal">38</text>
-  <text x="65" y="891" font-size="13" xml:space="preserve"><tspan fill="#cdd6f4">        </tspan><tspan fill="#cba6f7" font-weight="bold">pass</tspan></text>
+  <text x="65" y="891" font-size="13" fill="#cdd6f4" xml:space="preserve">        </text>
   <text x="40" y="913" text-anchor="end" font-size="12" fill="#585b70" font-weight="normal">39</text>
-  <text x="65" y="913" font-size="13" xml:space="preserve">    <tspan fill="#cdd6f4"></tspan><tspan fill="#cba6f7" font-weight="bold">elif</tspan> <tspan fill="#cdd6f4">pilihan</tspan> <tspan fill="#89dceb">==</tspan> <tspan fill="#a6e3a1">&quot;4&quot;</tspan><tspan fill="#89dceb">:</tspan></text>
+  <text x="65" y="913" font-size="13" xml:space="preserve">        <tspan fill="#9399b2" font-style="italic"># Validasi pilihan operasi (Nested If)</tspan></text>
   <text x="40" y="935" text-anchor="end" font-size="12" fill="#585b70" font-weight="normal">40</text>
-  <text x="65" y="935" font-size="13" xml:space="preserve">        <tspan fill="#9399b2" font-style="italic"># TODO: Panggil praktikum_04.buat_matriks_perkalian() &amp; analisis_list()</tspan></text>
+  <text x="65" y="935" font-size="13" xml:space="preserve">        <tspan fill="#cba6f7" font-weight="bold">if</tspan> <tspan fill="#cdd6f4">op</tspan> <tspan fill="#cba6f7" font-weight="bold">in</tspan> <tspan fill="#89dceb">[</tspan><tspan fill="#a6e3a1">&quot;A&quot;</tspan><tspan fill="#89dceb">,</tspan> <tspan fill="#a6e3a1">&quot;B&quot;</tspan><tspan fill="#89dceb">,</tspan> <tspan fill="#a6e3a1">&quot;C&quot;</tspan><tspan fill="#89dceb">,</tspan> <tspan fill="#a6e3a1">&quot;D&quot;</tspan><tspan fill="#89dceb">]</tspan><tspan fill="#89dceb">:</tspan></text>
   <text x="40" y="957" text-anchor="end" font-size="12" fill="#585b70" font-weight="normal">41</text>
-  <text x="65" y="957" font-size="13" xml:space="preserve"><tspan fill="#cdd6f4">        </tspan><tspan fill="#cba6f7" font-weight="bold">pass</tspan></text>
+  <text x="65" y="957" font-size="13" xml:space="preserve"><tspan fill="#cdd6f4">            </tspan><tspan fill="#cdd6f4">inp1</tspan> <tspan fill="#89dceb">=</tspan> <tspan fill="#89b4fa">input</tspan><tspan fill="#89dceb">(</tspan><tspan fill="#a6e3a1">&quot;Masukkan angka pertama : &quot;</tspan><tspan fill="#89dceb">)</tspan></text>
   <text x="40" y="979" text-anchor="end" font-size="12" fill="#585b70" font-weight="normal">42</text>
-  <text x="65" y="979" font-size="13" xml:space="preserve">    <tspan fill="#cdd6f4"></tspan><tspan fill="#cba6f7" font-weight="bold">elif</tspan> <tspan fill="#cdd6f4">pilihan</tspan> <tspan fill="#89dceb">==</tspan> <tspan fill="#a6e3a1">&quot;5&quot;</tspan><tspan fill="#89dceb">:</tspan></text>
+  <text x="65" y="979" font-size="13" xml:space="preserve">            <tspan fill="#cdd6f4">inp2</tspan> <tspan fill="#89dceb">=</tspan> <tspan fill="#89b4fa">input</tspan><tspan fill="#89dceb">(</tspan><tspan fill="#a6e3a1">&quot;Masukkan angka kedua   : &quot;</tspan><tspan fill="#89dceb">)</tspan></text>
   <text x="40" y="1001" text-anchor="end" font-size="12" fill="#585b70" font-weight="normal">43</text>
-  <text x="65" y="1001" font-size="13" xml:space="preserve">        <tspan fill="#9399b2" font-style="italic"># TODO: Tampilkan submenu operasi (+, -, *, /) dan panggil fungsi di operasi3</tspan></text>
+  <text x="65" y="1001" font-size="13" fill="#cdd6f4" xml:space="preserve"></text>
   <text x="40" y="1023" text-anchor="end" font-size="12" fill="#585b70" font-weight="normal">44</text>
-  <text x="65" y="1023" font-size="13" xml:space="preserve"><tspan fill="#cdd6f4">        </tspan><tspan fill="#cba6f7" font-weight="bold">pass</tspan></text>
+  <text x="65" y="1023" font-size="13" xml:space="preserve">            <tspan fill="#9399b2" font-style="italic"># Validasi input menggunakan .isdigit() agar tidak crash</tspan></text>
   <text x="40" y="1045" text-anchor="end" font-size="12" fill="#585b70" font-weight="normal">45</text>
-  <text x="65" y="1045" font-size="13" xml:space="preserve">    <tspan fill="#cdd6f4"></tspan><tspan fill="#cba6f7" font-weight="bold">else</tspan><tspan fill="#89dceb">:</tspan></text>
+  <text x="65" y="1045" font-size="13" xml:space="preserve">            <tspan fill="#cba6f7" font-weight="bold">if</tspan> <tspan fill="#cdd6f4">inp1</tspan><tspan fill="#89dceb">.</tspan><tspan fill="#89b4fa">isdigit</tspan><tspan fill="#89dceb">(</tspan><tspan fill="#89dceb">)</tspan> <tspan fill="#cba6f7" font-weight="bold">and</tspan> <tspan fill="#cdd6f4">inp2</tspan><tspan fill="#89dceb">.</tspan><tspan fill="#89b4fa">isdigit</tspan><tspan fill="#89dceb">(</tspan><tspan fill="#89dceb">)</tspan><tspan fill="#89dceb">:</tspan></text>
   <text x="40" y="1067" text-anchor="end" font-size="12" fill="#585b70" font-weight="normal">46</text>
-  <text x="65" y="1067" font-size="13" xml:space="preserve"><tspan fill="#cdd6f4">        </tspan><tspan fill="#89b4fa">print</tspan><tspan fill="#89dceb">(</tspan><tspan fill="#a6e3a1">&quot;Peringatan: Menu tidak valid! Masukkan angka 0 - 5.&quot;</tspan><tspan fill="#89dceb">)</tspan></text>
+  <text x="65" y="1067" font-size="13" xml:space="preserve"><tspan fill="#cdd6f4">                </tspan><tspan fill="#cdd6f4">a</tspan> <tspan fill="#89dceb">=</tspan> <tspan fill="#89b4fa">int</tspan><tspan fill="#89dceb">(</tspan><tspan fill="#cdd6f4">inp1</tspan><tspan fill="#89dceb">)</tspan></text>
+  <text x="40" y="1089" text-anchor="end" font-size="12" fill="#585b70" font-weight="normal">47</text>
+  <text x="65" y="1089" font-size="13" xml:space="preserve">                <tspan fill="#cdd6f4">b</tspan> <tspan fill="#89dceb">=</tspan> <tspan fill="#89b4fa">int</tspan><tspan fill="#89dceb">(</tspan><tspan fill="#cdd6f4">inp2</tspan><tspan fill="#89dceb">)</tspan></text>
+  <text x="40" y="1111" text-anchor="end" font-size="12" fill="#585b70" font-weight="normal">48</text>
+  <text x="65" y="1111" font-size="13" fill="#cdd6f4" xml:space="preserve"></text>
+  <text x="40" y="1133" text-anchor="end" font-size="12" fill="#585b70" font-weight="normal">49</text>
+  <text x="65" y="1133" font-size="13" xml:space="preserve">                <tspan fill="#cba6f7" font-weight="bold">if</tspan> <tspan fill="#cdd6f4">op</tspan> <tspan fill="#89dceb">==</tspan> <tspan fill="#a6e3a1">&quot;A&quot;</tspan><tspan fill="#89dceb">:</tspan></text>
+  <text x="40" y="1155" text-anchor="end" font-size="12" fill="#585b70" font-weight="normal">50</text>
+  <text x="65" y="1155" font-size="13" xml:space="preserve"><tspan fill="#cdd6f4">                    </tspan><tspan fill="#cdd6f4">hasil</tspan> <tspan fill="#89dceb">=</tspan> <tspan fill="#cdd6f4">operasi3</tspan><tspan fill="#89dceb">.</tspan><tspan fill="#cdd6f4">tambah</tspan><tspan fill="#89dceb">(</tspan><tspan fill="#cdd6f4">a</tspan><tspan fill="#89dceb">,</tspan> <tspan fill="#cdd6f4">b</tspan><tspan fill="#89dceb">)</tspan></text>
+  <text x="40" y="1177" text-anchor="end" font-size="12" fill="#585b70" font-weight="normal">51</text>
+  <text x="65" y="1177" font-size="13" xml:space="preserve">                    <tspan fill="#89b4fa">print</tspan><tspan fill="#89dceb">(</tspan><tspan fill="#a6e3a1">f&quot;Hasil {a} + {b} = {hasil}&quot;</tspan><tspan fill="#89dceb">)</tspan></text>
+  <text x="40" y="1199" text-anchor="end" font-size="12" fill="#585b70" font-weight="normal">52</text>
+  <text x="65" y="1199" font-size="13" xml:space="preserve">                <tspan fill="#cdd6f4"></tspan><tspan fill="#cba6f7" font-weight="bold">elif</tspan> <tspan fill="#cdd6f4">op</tspan> <tspan fill="#89dceb">==</tspan> <tspan fill="#a6e3a1">&quot;B&quot;</tspan><tspan fill="#89dceb">:</tspan></text>
+  <text x="40" y="1221" text-anchor="end" font-size="12" fill="#585b70" font-weight="normal">53</text>
+  <text x="65" y="1221" font-size="13" xml:space="preserve"><tspan fill="#cdd6f4">                    </tspan><tspan fill="#cdd6f4">hasil</tspan> <tspan fill="#89dceb">=</tspan> <tspan fill="#cdd6f4">operasi3</tspan><tspan fill="#89dceb">.</tspan><tspan fill="#cdd6f4">kurang</tspan><tspan fill="#89dceb">(</tspan><tspan fill="#cdd6f4">a</tspan><tspan fill="#89dceb">,</tspan> <tspan fill="#cdd6f4">b</tspan><tspan fill="#89dceb">)</tspan></text>
+  <text x="40" y="1243" text-anchor="end" font-size="12" fill="#585b70" font-weight="normal">54</text>
+  <text x="65" y="1243" font-size="13" xml:space="preserve">                    <tspan fill="#89b4fa">print</tspan><tspan fill="#89dceb">(</tspan><tspan fill="#a6e3a1">f&quot;Hasil {a} - {b} = {hasil}&quot;</tspan><tspan fill="#89dceb">)</tspan></text>
+  <text x="40" y="1265" text-anchor="end" font-size="12" fill="#585b70" font-weight="normal">55</text>
+  <text x="65" y="1265" font-size="13" xml:space="preserve">                <tspan fill="#cdd6f4"></tspan><tspan fill="#cba6f7" font-weight="bold">elif</tspan> <tspan fill="#cdd6f4">op</tspan> <tspan fill="#89dceb">==</tspan> <tspan fill="#a6e3a1">&quot;C&quot;</tspan><tspan fill="#89dceb">:</tspan></text>
+  <text x="40" y="1287" text-anchor="end" font-size="12" fill="#585b70" font-weight="normal">56</text>
+  <text x="65" y="1287" font-size="13" xml:space="preserve"><tspan fill="#cdd6f4">                    </tspan><tspan fill="#cdd6f4">hasil</tspan> <tspan fill="#89dceb">=</tspan> <tspan fill="#cdd6f4">operasi3</tspan><tspan fill="#89dceb">.</tspan><tspan fill="#cdd6f4">kali</tspan><tspan fill="#89dceb">(</tspan><tspan fill="#cdd6f4">a</tspan><tspan fill="#89dceb">,</tspan> <tspan fill="#cdd6f4">b</tspan><tspan fill="#89dceb">)</tspan></text>
+  <text x="40" y="1309" text-anchor="end" font-size="12" fill="#585b70" font-weight="normal">57</text>
+  <text x="65" y="1309" font-size="13" xml:space="preserve">                    <tspan fill="#89b4fa">print</tspan><tspan fill="#89dceb">(</tspan><tspan fill="#a6e3a1">f&quot;Hasil {a} * {b} = {hasil}&quot;</tspan><tspan fill="#89dceb">)</tspan></text>
+  <text x="40" y="1331" text-anchor="end" font-size="12" fill="#585b70" font-weight="normal">58</text>
+  <text x="65" y="1331" font-size="13" xml:space="preserve">                <tspan fill="#cdd6f4"></tspan><tspan fill="#cba6f7" font-weight="bold">elif</tspan> <tspan fill="#cdd6f4">op</tspan> <tspan fill="#89dceb">==</tspan> <tspan fill="#a6e3a1">&quot;D&quot;</tspan><tspan fill="#89dceb">:</tspan></text>
+  <text x="40" y="1353" text-anchor="end" font-size="12" fill="#585b70" font-weight="normal">59</text>
+  <text x="65" y="1353" font-size="13" xml:space="preserve"><tspan fill="#cdd6f4">                    </tspan><tspan fill="#cdd6f4">hasil</tspan> <tspan fill="#89dceb">=</tspan> <tspan fill="#cdd6f4">operasi3</tspan><tspan fill="#89dceb">.</tspan><tspan fill="#cdd6f4">bagi</tspan><tspan fill="#89dceb">(</tspan><tspan fill="#cdd6f4">a</tspan><tspan fill="#89dceb">,</tspan> <tspan fill="#cdd6f4">b</tspan><tspan fill="#89dceb">)</tspan></text>
+  <text x="40" y="1375" text-anchor="end" font-size="12" fill="#585b70" font-weight="normal">60</text>
+  <text x="65" y="1375" font-size="13" xml:space="preserve">                    <tspan fill="#89b4fa">print</tspan><tspan fill="#89dceb">(</tspan><tspan fill="#a6e3a1">f&quot;Hasil {a} / {b} = {hasil}&quot;</tspan><tspan fill="#89dceb">)</tspan></text>
+  <text x="40" y="1397" text-anchor="end" font-size="12" fill="#585b70" font-weight="normal">61</text>
+  <text x="65" y="1397" font-size="13" xml:space="preserve">            <tspan fill="#cdd6f4"></tspan><tspan fill="#cdd6f4"></tspan><tspan fill="#cba6f7" font-weight="bold">else</tspan><tspan fill="#89dceb">:</tspan></text>
+  <text x="40" y="1419" text-anchor="end" font-size="12" fill="#585b70" font-weight="normal">62</text>
+  <text x="65" y="1419" font-size="13" xml:space="preserve"><tspan fill="#cdd6f4">                </tspan><tspan fill="#89b4fa">print</tspan><tspan fill="#89dceb">(</tspan><tspan fill="#a6e3a1">&quot;Peringatan: Masukan wajib berupa bilangan bulat!&quot;</tspan><tspan fill="#89dceb">)</tspan></text>
+  <text x="40" y="1441" text-anchor="end" font-size="12" fill="#585b70" font-weight="normal">63</text>
+  <text x="65" y="1441" font-size="13" xml:space="preserve">        <tspan fill="#cdd6f4"></tspan><tspan fill="#cdd6f4"></tspan><tspan fill="#cba6f7" font-weight="bold">else</tspan><tspan fill="#89dceb">:</tspan></text>
+  <text x="40" y="1463" text-anchor="end" font-size="12" fill="#585b70" font-weight="normal">64</text>
+  <text x="65" y="1463" font-size="13" xml:space="preserve"><tspan fill="#cdd6f4">            </tspan><tspan fill="#89b4fa">print</tspan><tspan fill="#89dceb">(</tspan><tspan fill="#a6e3a1">&quot;Peringatan: Pilihan operasi tidak valid!&quot;</tspan><tspan fill="#89dceb">)</tspan></text>
+  <text x="40" y="1485" text-anchor="end" font-size="12" fill="#585b70" font-weight="normal">65</text>
+  <text x="65" y="1485" font-size="13" fill="#cdd6f4" xml:space="preserve"></text>
+  <text x="40" y="1507" text-anchor="end" font-size="12" fill="#585b70" font-weight="normal">66</text>
+  <text x="65" y="1507" font-size="13" xml:space="preserve">    <tspan fill="#9399b2" font-style="italic"># ----------------------------------------------------</tspan></text>
+  <text x="40" y="1529" text-anchor="end" font-size="12" fill="#585b70" font-weight="normal">67</text>
+  <text x="65" y="1529" font-size="13" xml:space="preserve">    <tspan fill="#9399b2" font-style="italic"># MENU 2: CEK SIFAT BILANGAN GANJIL / GENAP</tspan></text>
+  <text x="40" y="1551" text-anchor="end" font-size="12" fill="#585b70" font-weight="normal">68</text>
+  <text x="65" y="1551" font-size="13" xml:space="preserve">    <tspan fill="#9399b2" font-style="italic"># ----------------------------------------------------</tspan></text>
+  <text x="40" y="1573" text-anchor="end" font-size="12" fill="#585b70" font-weight="normal">69</text>
+  <text x="65" y="1573" font-size="13" xml:space="preserve">    <tspan fill="#cdd6f4"></tspan><tspan fill="#cdd6f4"></tspan><tspan fill="#cba6f7" font-weight="bold">elif</tspan> <tspan fill="#cdd6f4">pilihan</tspan> <tspan fill="#89dceb">==</tspan> <tspan fill="#a6e3a1">&quot;2&quot;</tspan><tspan fill="#89dceb">:</tspan></text>
+  <text x="40" y="1595" text-anchor="end" font-size="12" fill="#585b70" font-weight="normal">70</text>
+  <text x="65" y="1595" font-size="13" xml:space="preserve"><tspan fill="#cdd6f4">        </tspan><tspan fill="#89b4fa">print</tspan><tspan fill="#89dceb">(</tspan><tspan fill="#a6e3a1">&quot;\n--- Cek Ganjil / Genap (Modulus %) ---&quot;</tspan><tspan fill="#89dceb">)</tspan></text>
+  <text x="40" y="1617" text-anchor="end" font-size="12" fill="#585b70" font-weight="normal">71</text>
+  <text x="65" y="1617" font-size="13" xml:space="preserve">        <tspan fill="#cdd6f4">inp_angka</tspan> <tspan fill="#89dceb">=</tspan> <tspan fill="#89b4fa">input</tspan><tspan fill="#89dceb">(</tspan><tspan fill="#a6e3a1">&quot;Masukkan angka bulat positif: &quot;</tspan><tspan fill="#89dceb">)</tspan></text>
+  <text x="40" y="1639" text-anchor="end" font-size="12" fill="#585b70" font-weight="normal">72</text>
+  <text x="65" y="1639" font-size="13" fill="#cdd6f4" xml:space="preserve"></text>
+  <text x="40" y="1661" text-anchor="end" font-size="12" fill="#585b70" font-weight="normal">73</text>
+  <text x="65" y="1661" font-size="13" xml:space="preserve">        <tspan fill="#cba6f7" font-weight="bold">if</tspan> <tspan fill="#cdd6f4">inp_angka</tspan><tspan fill="#89dceb">.</tspan><tspan fill="#89b4fa">isdigit</tspan><tspan fill="#89dceb">(</tspan><tspan fill="#89dceb">)</tspan><tspan fill="#89dceb">:</tspan></text>
+  <text x="40" y="1683" text-anchor="end" font-size="12" fill="#585b70" font-weight="normal">74</text>
+  <text x="65" y="1683" font-size="13" xml:space="preserve"><tspan fill="#cdd6f4">            </tspan><tspan fill="#cdd6f4">angka</tspan> <tspan fill="#89dceb">=</tspan> <tspan fill="#89b4fa">int</tspan><tspan fill="#89dceb">(</tspan><tspan fill="#cdd6f4">inp_angka</tspan><tspan fill="#89dceb">)</tspan></text>
+  <text x="40" y="1705" text-anchor="end" font-size="12" fill="#585b70" font-weight="normal">75</text>
+  <text x="65" y="1705" font-size="13" xml:space="preserve">            <tspan fill="#cdd6f4">status</tspan> <tspan fill="#89dceb">=</tspan> <tspan fill="#cdd6f4">operasi3</tspan><tspan fill="#89dceb">.</tspan><tspan fill="#cdd6f4">cek_ganjil_genap</tspan><tspan fill="#89dceb">(</tspan><tspan fill="#cdd6f4">angka</tspan><tspan fill="#89dceb">)</tspan></text>
+  <text x="40" y="1727" text-anchor="end" font-size="12" fill="#585b70" font-weight="normal">76</text>
+  <text x="65" y="1727" font-size="13" xml:space="preserve">            <tspan fill="#89b4fa">print</tspan><tspan fill="#89dceb">(</tspan><tspan fill="#a6e3a1">f&quot;Hasil: Angka {angka} tergolong bilangan {status}&quot;</tspan><tspan fill="#89dceb">)</tspan></text>
+  <text x="40" y="1749" text-anchor="end" font-size="12" fill="#585b70" font-weight="normal">77</text>
+  <text x="65" y="1749" font-size="13" xml:space="preserve">        <tspan fill="#cdd6f4"></tspan><tspan fill="#cba6f7" font-weight="bold">else</tspan><tspan fill="#89dceb">:</tspan></text>
+  <text x="40" y="1771" text-anchor="end" font-size="12" fill="#585b70" font-weight="normal">78</text>
+  <text x="65" y="1771" font-size="13" xml:space="preserve"><tspan fill="#cdd6f4">            </tspan><tspan fill="#89b4fa">print</tspan><tspan fill="#89dceb">(</tspan><tspan fill="#a6e3a1">&quot;Peringatan: Masukan harus berupa angka murni!&quot;</tspan><tspan fill="#89dceb">)</tspan></text>
+  <text x="40" y="1793" text-anchor="end" font-size="12" fill="#585b70" font-weight="normal">79</text>
+  <text x="65" y="1793" font-size="13" fill="#cdd6f4" xml:space="preserve"></text>
+  <text x="40" y="1815" text-anchor="end" font-size="12" fill="#585b70" font-weight="normal">80</text>
+  <text x="65" y="1815" font-size="13" xml:space="preserve">    <tspan fill="#9399b2" font-style="italic"># ----------------------------------------------------</tspan></text>
+  <text x="40" y="1837" text-anchor="end" font-size="12" fill="#585b70" font-weight="normal">81</text>
+  <text x="65" y="1837" font-size="13" xml:space="preserve">    <tspan fill="#9399b2" font-style="italic"># MENU 3: HITUNG DERET ARITMATIKA (WHILE + FOR)</tspan></text>
+  <text x="40" y="1859" text-anchor="end" font-size="12" fill="#585b70" font-weight="normal">82</text>
+  <text x="65" y="1859" font-size="13" xml:space="preserve">    <tspan fill="#9399b2" font-style="italic"># ----------------------------------------------------</tspan></text>
+  <text x="40" y="1881" text-anchor="end" font-size="12" fill="#585b70" font-weight="normal">83</text>
+  <text x="65" y="1881" font-size="13" xml:space="preserve">    <tspan fill="#cdd6f4"></tspan><tspan fill="#cdd6f4"></tspan><tspan fill="#cba6f7" font-weight="bold">elif</tspan> <tspan fill="#cdd6f4">pilihan</tspan> <tspan fill="#89dceb">==</tspan> <tspan fill="#a6e3a1">&quot;3&quot;</tspan><tspan fill="#89dceb">:</tspan></text>
+  <text x="40" y="1903" text-anchor="end" font-size="12" fill="#585b70" font-weight="normal">84</text>
+  <text x="65" y="1903" font-size="13" xml:space="preserve"><tspan fill="#cdd6f4">        </tspan><tspan fill="#89b4fa">print</tspan><tspan fill="#89dceb">(</tspan><tspan fill="#a6e3a1">&quot;\n--- Hitung Deret Aritmatika ---&quot;</tspan><tspan fill="#89dceb">)</tspan></text>
+  <text x="40" y="1925" text-anchor="end" font-size="12" fill="#585b70" font-weight="normal">85</text>
+  <text x="65" y="1925" font-size="13" xml:space="preserve">        <tspan fill="#cdd6f4">inp_a</tspan> <tspan fill="#89dceb">=</tspan> <tspan fill="#89b4fa">input</tspan><tspan fill="#89dceb">(</tspan><tspan fill="#a6e3a1">&quot;Suku Pertama (a) : &quot;</tspan><tspan fill="#89dceb">)</tspan></text>
+  <text x="40" y="1947" text-anchor="end" font-size="12" fill="#585b70" font-weight="normal">86</text>
+  <text x="65" y="1947" font-size="13" xml:space="preserve">        <tspan fill="#cdd6f4">inp_b</tspan> <tspan fill="#89dceb">=</tspan> <tspan fill="#89b4fa">input</tspan><tspan fill="#89dceb">(</tspan><tspan fill="#a6e3a1">&quot;Beda Deret   (b) : &quot;</tspan><tspan fill="#89dceb">)</tspan></text>
+  <text x="40" y="1969" text-anchor="end" font-size="12" fill="#585b70" font-weight="normal">87</text>
+  <text x="65" y="1969" font-size="13" xml:space="preserve">        <tspan fill="#cdd6f4">inp_n</tspan> <tspan fill="#89dceb">=</tspan> <tspan fill="#89b4fa">input</tspan><tspan fill="#89dceb">(</tspan><tspan fill="#a6e3a1">&quot;Banyak Suku  (n) : &quot;</tspan><tspan fill="#89dceb">)</tspan></text>
+  <text x="40" y="1991" text-anchor="end" font-size="12" fill="#585b70" font-weight="normal">88</text>
+  <text x="65" y="1991" font-size="13" fill="#cdd6f4" xml:space="preserve"></text>
+  <text x="40" y="2013" text-anchor="end" font-size="12" fill="#585b70" font-weight="normal">89</text>
+  <text x="65" y="2013" font-size="13" xml:space="preserve">        <tspan fill="#cba6f7" font-weight="bold">if</tspan> <tspan fill="#cdd6f4">inp_a</tspan><tspan fill="#89dceb">.</tspan><tspan fill="#89b4fa">isdigit</tspan><tspan fill="#89dceb">(</tspan><tspan fill="#89dceb">)</tspan> <tspan fill="#cba6f7" font-weight="bold">and</tspan> <tspan fill="#cdd6f4">inp_b</tspan><tspan fill="#89dceb">.</tspan><tspan fill="#89b4fa">isdigit</tspan><tspan fill="#89dceb">(</tspan><tspan fill="#89dceb">)</tspan> <tspan fill="#cba6f7" font-weight="bold">and</tspan> <tspan fill="#cdd6f4">inp_n</tspan><tspan fill="#89dceb">.</tspan><tspan fill="#89b4fa">isdigit</tspan><tspan fill="#89dceb">(</tspan><tspan fill="#89dceb">)</tspan><tspan fill="#89dceb">:</tspan></text>
+  <text x="40" y="2035" text-anchor="end" font-size="12" fill="#585b70" font-weight="normal">90</text>
+  <text x="65" y="2035" font-size="13" xml:space="preserve"><tspan fill="#cdd6f4">            </tspan><tspan fill="#cdd6f4">a</tspan> <tspan fill="#89dceb">=</tspan> <tspan fill="#89b4fa">int</tspan><tspan fill="#89dceb">(</tspan><tspan fill="#cdd6f4">inp_a</tspan><tspan fill="#89dceb">)</tspan></text>
+  <text x="40" y="2057" text-anchor="end" font-size="12" fill="#585b70" font-weight="normal">91</text>
+  <text x="65" y="2057" font-size="13" xml:space="preserve">            <tspan fill="#cdd6f4">b</tspan> <tspan fill="#89dceb">=</tspan> <tspan fill="#89b4fa">int</tspan><tspan fill="#89dceb">(</tspan><tspan fill="#cdd6f4">inp_b</tspan><tspan fill="#89dceb">)</tspan></text>
+  <text x="40" y="2079" text-anchor="end" font-size="12" fill="#585b70" font-weight="normal">92</text>
+  <text x="65" y="2079" font-size="13" xml:space="preserve">            <tspan fill="#cdd6f4">n</tspan> <tspan fill="#89dceb">=</tspan> <tspan fill="#89b4fa">int</tspan><tspan fill="#89dceb">(</tspan><tspan fill="#cdd6f4">inp_n</tspan><tspan fill="#89dceb">)</tspan></text>
+  <text x="40" y="2101" text-anchor="end" font-size="12" fill="#585b70" font-weight="normal">93</text>
+  <text x="65" y="2101" font-size="13" fill="#cdd6f4" xml:space="preserve"></text>
+  <text x="40" y="2123" text-anchor="end" font-size="12" fill="#585b70" font-weight="normal">94</text>
+  <text x="65" y="2123" font-size="13" xml:space="preserve">            <tspan fill="#9399b2" font-style="italic"># Perulangan bersyarat while untuk memastikan n &gt; 0</tspan></text>
+  <text x="40" y="2145" text-anchor="end" font-size="12" fill="#585b70" font-weight="normal">95</text>
+  <text x="65" y="2145" font-size="13" xml:space="preserve">            <tspan fill="#cba6f7" font-weight="bold">while</tspan> <tspan fill="#cdd6f4">n</tspan> <tspan fill="#89dceb">&lt;=</tspan> <tspan fill="#fab387">0</tspan><tspan fill="#89dceb">:</tspan></text>
+  <text x="40" y="2167" text-anchor="end" font-size="12" fill="#585b70" font-weight="normal">96</text>
+  <text x="65" y="2167" font-size="13" xml:space="preserve"><tspan fill="#cdd6f4">                </tspan><tspan fill="#89b4fa">print</tspan><tspan fill="#89dceb">(</tspan><tspan fill="#a6e3a1">&quot;Peringatan: Banyak suku (n) harus lebih dari 0!&quot;</tspan><tspan fill="#89dceb">)</tspan></text>
+  <text x="40" y="2189" text-anchor="end" font-size="12" fill="#585b70" font-weight="normal">97</text>
+  <text x="65" y="2189" font-size="13" xml:space="preserve">                <tspan fill="#cdd6f4">n</tspan> <tspan fill="#89dceb">=</tspan> <tspan fill="#89b4fa">int</tspan><tspan fill="#89dceb">(</tspan><tspan fill="#89b4fa">input</tspan><tspan fill="#89dceb">(</tspan><tspan fill="#a6e3a1">&quot;Masukkan ulang banyak suku (n): &quot;</tspan><tspan fill="#89dceb">)</tspan><tspan fill="#89dceb">)</tspan></text>
+  <text x="40" y="2211" text-anchor="end" font-size="12" fill="#585b70" font-weight="normal">98</text>
+  <text x="65" y="2211" font-size="13" fill="#cdd6f4" xml:space="preserve"></text>
+  <text x="40" y="2233" text-anchor="end" font-size="12" fill="#585b70" font-weight="normal">99</text>
+  <text x="65" y="2233" font-size="13" xml:space="preserve">            <tspan fill="#cdd6f4"></tspan><tspan fill="#cdd6f4">total_deret</tspan> <tspan fill="#89dceb">=</tspan> <tspan fill="#cdd6f4">operasi3</tspan><tspan fill="#89dceb">.</tspan><tspan fill="#cdd6f4">hitung_deret_aritmatika</tspan><tspan fill="#89dceb">(</tspan><tspan fill="#cdd6f4">a</tspan><tspan fill="#89dceb">,</tspan> <tspan fill="#cdd6f4">b</tspan><tspan fill="#89dceb">,</tspan> <tspan fill="#cdd6f4">n</tspan><tspan fill="#89dceb">)</tspan></text>
+  <text x="40" y="2255" text-anchor="end" font-size="12" fill="#585b70" font-weight="normal">100</text>
+  <text x="65" y="2255" font-size="13" xml:space="preserve">            <tspan fill="#89b4fa">print</tspan><tspan fill="#89dceb">(</tspan><tspan fill="#a6e3a1">f&quot;Total Jumlah Seluruh Deret = {total_deret}&quot;</tspan><tspan fill="#89dceb">)</tspan></text>
+  <text x="40" y="2277" text-anchor="end" font-size="12" fill="#585b70" font-weight="normal">101</text>
+  <text x="65" y="2277" font-size="13" xml:space="preserve">        <tspan fill="#cdd6f4"></tspan><tspan fill="#cba6f7" font-weight="bold">else</tspan><tspan fill="#89dceb">:</tspan></text>
+  <text x="40" y="2299" text-anchor="end" font-size="12" fill="#585b70" font-weight="normal">102</text>
+  <text x="65" y="2299" font-size="13" xml:space="preserve"><tspan fill="#cdd6f4">            </tspan><tspan fill="#89b4fa">print</tspan><tspan fill="#89dceb">(</tspan><tspan fill="#a6e3a1">&quot;Peringatan: Seluruh masukan wajib berupa angka bulat!&quot;</tspan><tspan fill="#89dceb">)</tspan></text>
+  <text x="40" y="2321" text-anchor="end" font-size="12" fill="#585b70" font-weight="normal">103</text>
+  <text x="65" y="2321" font-size="13" fill="#cdd6f4" xml:space="preserve"></text>
+  <text x="40" y="2343" text-anchor="end" font-size="12" fill="#585b70" font-weight="normal">104</text>
+  <text x="65" y="2343" font-size="13" xml:space="preserve">    <tspan fill="#9399b2" font-style="italic"># ----------------------------------------------------</tspan></text>
+  <text x="40" y="2365" text-anchor="end" font-size="12" fill="#585b70" font-weight="normal">105</text>
+  <text x="65" y="2365" font-size="13" xml:space="preserve">    <tspan fill="#9399b2" font-style="italic"># MENU 4: CETAK TABEL PERKALIAN MATRIKS (NESTED LOOP)</tspan></text>
+  <text x="40" y="2387" text-anchor="end" font-size="12" fill="#585b70" font-weight="normal">106</text>
+  <text x="65" y="2387" font-size="13" xml:space="preserve">    <tspan fill="#9399b2" font-style="italic"># ----------------------------------------------------</tspan></text>
+  <text x="40" y="2409" text-anchor="end" font-size="12" fill="#585b70" font-weight="normal">107</text>
+  <text x="65" y="2409" font-size="13" xml:space="preserve">    <tspan fill="#cdd6f4"></tspan><tspan fill="#cdd6f4"></tspan><tspan fill="#cba6f7" font-weight="bold">elif</tspan> <tspan fill="#cdd6f4">pilihan</tspan> <tspan fill="#89dceb">==</tspan> <tspan fill="#a6e3a1">&quot;4&quot;</tspan><tspan fill="#89dceb">:</tspan></text>
+  <text x="40" y="2431" text-anchor="end" font-size="12" fill="#585b70" font-weight="normal">108</text>
+  <text x="65" y="2431" font-size="13" xml:space="preserve"><tspan fill="#cdd6f4">        </tspan><tspan fill="#89b4fa">print</tspan><tspan fill="#89dceb">(</tspan><tspan fill="#a6e3a1">&quot;\n--- Matriks Tabel Perkalian 1-3 (Nested Loop) ---&quot;</tspan><tspan fill="#89dceb">)</tspan></text>
+  <text x="40" y="2453" text-anchor="end" font-size="12" fill="#585b70" font-weight="normal">109</text>
+  <text x="65" y="2453" font-size="13" xml:space="preserve">        <tspan fill="#9399b2" font-style="italic"># Loop luar mengatur perpindahan baris</tspan></text>
+  <text x="40" y="2475" text-anchor="end" font-size="12" fill="#585b70" font-weight="normal">110</text>
+  <text x="65" y="2475" font-size="13" xml:space="preserve">        <tspan fill="#cba6f7" font-weight="bold">for</tspan> <tspan fill="#cdd6f4">baris</tspan> <tspan fill="#cba6f7" font-weight="bold">in</tspan> <tspan fill="#89b4fa">range</tspan><tspan fill="#89dceb">(</tspan><tspan fill="#fab387">1</tspan><tspan fill="#89dceb">,</tspan> <tspan fill="#fab387">4</tspan><tspan fill="#89dceb">)</tspan><tspan fill="#89dceb">:</tspan></text>
+  <text x="40" y="2497" text-anchor="end" font-size="12" fill="#585b70" font-weight="normal">111</text>
+  <text x="65" y="2497" font-size="13" xml:space="preserve">            <tspan fill="#9399b2" font-style="italic"># Loop dalam mencetak seluruh kolom sampai selesai</tspan></text>
+  <text x="40" y="2519" text-anchor="end" font-size="12" fill="#585b70" font-weight="normal">112</text>
+  <text x="65" y="2519" font-size="13" xml:space="preserve"><tspan fill="#cdd6f4">            </tspan><tspan fill="#cba6f7" font-weight="bold">for</tspan> <tspan fill="#cdd6f4">kolom</tspan> <tspan fill="#cba6f7" font-weight="bold">in</tspan> <tspan fill="#89b4fa">range</tspan><tspan fill="#89dceb">(</tspan><tspan fill="#fab387">1</tspan><tspan fill="#89dceb">,</tspan> <tspan fill="#fab387">4</tspan><tspan fill="#89dceb">)</tspan><tspan fill="#89dceb">:</tspan></text>
+  <text x="40" y="2541" text-anchor="end" font-size="12" fill="#585b70" font-weight="normal">113</text>
+  <text x="65" y="2541" font-size="13" xml:space="preserve"><tspan fill="#cdd6f4">                </tspan><tspan fill="#89b4fa">print</tspan><tspan fill="#89dceb">(</tspan><tspan fill="#a6e3a1">f&quot;{baris * kolom}\t&quot;</tspan><tspan fill="#89dceb">,</tspan> <tspan fill="#cdd6f4">end</tspan><tspan fill="#89dceb">=</tspan><tspan fill="#a6e3a1">&quot;&quot;</tspan><tspan fill="#89dceb">)</tspan></text>
+  <text x="40" y="2563" text-anchor="end" font-size="12" fill="#585b70" font-weight="normal">114</text>
+  <text x="65" y="2563" font-size="13" xml:space="preserve">            <tspan fill="#cdd6f4"></tspan><tspan fill="#89b4fa">print</tspan><tspan fill="#89dceb">(</tspan><tspan fill="#89dceb">)</tspan>  <tspan fill="#9399b2" font-style="italic"># Pindah ke baris baru</tspan></text>
+  <text x="40" y="2585" text-anchor="end" font-size="12" fill="#585b70" font-weight="normal">115</text>
+  <text x="65" y="2585" font-size="13" fill="#cdd6f4" xml:space="preserve"></text>
+  <text x="40" y="2607" text-anchor="end" font-size="12" fill="#585b70" font-weight="normal">116</text>
+  <text x="65" y="2607" font-size="13" xml:space="preserve">    <tspan fill="#9399b2" font-style="italic"># ----------------------------------------------------</tspan></text>
+  <text x="40" y="2629" text-anchor="end" font-size="12" fill="#585b70" font-weight="normal">117</text>
+  <text x="65" y="2629" font-size="13" xml:space="preserve">    <tspan fill="#9399b2" font-style="italic"># KONDISI MENU TIDAK VALID</tspan></text>
+  <text x="40" y="2651" text-anchor="end" font-size="12" fill="#585b70" font-weight="normal">118</text>
+  <text x="65" y="2651" font-size="13" xml:space="preserve">    <tspan fill="#9399b2" font-style="italic"># ----------------------------------------------------</tspan></text>
+  <text x="40" y="2673" text-anchor="end" font-size="12" fill="#585b70" font-weight="normal">119</text>
+  <text x="65" y="2673" font-size="13" xml:space="preserve">    <tspan fill="#cdd6f4"></tspan><tspan fill="#cdd6f4"></tspan><tspan fill="#cba6f7" font-weight="bold">else</tspan><tspan fill="#89dceb">:</tspan></text>
+  <text x="40" y="2695" text-anchor="end" font-size="12" fill="#585b70" font-weight="normal">120</text>
+  <text x="65" y="2695" font-size="13" xml:space="preserve"><tspan fill="#cdd6f4">        </tspan><tspan fill="#89b4fa">print</tspan><tspan fill="#89dceb">(</tspan><tspan fill="#a6e3a1">&quot;Pilihan tidak valid! Silakan masukkan opsi 1 sampai 5.&quot;</tspan><tspan fill="#89dceb">)</tspan></text>
 </svg>

@@ -284,78 +284,173 @@ nilai_maba.append(95)  # Menambah data di akhir
 print("Daftar Nilai :", nilai_maba)
 print("Nilai Tertinggi:", max(nilai_maba)))"""
 
-TUGAS_OPERASI3_SKELETON = """# ==========================================
-# TUGAS MANDIRI 1: MODUL FUNGSI MATEMATIKA
-# Berkas: operasi3.py (WAJIB DILENGKAPI SENDIRI)
-# ==========================================
+TUGAS_OPERASI3_CODE = """# ==============================================================================
+# MODUL: operasi3.py
+# Modul fungsi mandiri (def) dengan nilai kembalian (return)
+# ==============================================================================
 
-def hitung_tambah(a, b):
-    \"\"\"Menghitung hasil penjumlahan: a + b\"\"\"
-    # TODO: Kembalikan hasil penjumlahan a dan b
-    pass
+def tambah(a, b):
+    \"\"\"Mengembalikan hasil penjumlahan a + b\"\"\"
+    return a + b
 
-def hitung_kurang(a, b):
-    \"\"\"Menghitung hasil pengurangan: a - b\"\"\"
-    # TODO: Kembalikan hasil pengurangan a dan b
-    pass
+def kurang(a, b):
+    \"\"\"Mengembalikan hasil pengurangan a - b\"\"\"
+    return a - b
 
-def hitung_kali(a, b):
-    \"\"\"Menghitung hasil perkalian: a * b\"\"\"
-    # TODO: Kembalikan hasil perkalian a dan b
-    pass
+def kali(a, b):
+    \"\"\"Mengembalikan hasil perkalian a * b\"\"\"
+    return a * b
 
-def hitung_bagi(a, b):
-    \"\"\"Menghitung hasil pembagian: a / b\"\"\"
-    # TODO: Cek apakah b == 0, jika ya kembalikan pesan error
-    # TODO: Jika tidak nol, kembalikan hasil bagi a / b
-    pass"""
+def bagi(a, b):
+    \"\"\"
+    Mengembalikan hasil pembagian a / b.
+    Menangani pencegahan error saat pembagi bernilai nol.
+    \"\"\"
+    if b == 0:
+        return "Error: Pembagi tidak boleh bernilai nol!"
+    return a / b
 
-TUGAS_MENU_SKELETON = """# ==========================================
-# TUGAS MANDIRI 2: DASHBOARD MENU TERPADU
-# Berkas: tugas3_menu.py (WAJIB DILENGKAPI SENDIRI)
-# ==========================================
+def cek_ganjil_genap(angka):
+    \"\"\"
+    Memeriksa sifat bilangan ganjil atau genap 
+    menggunakan operator modulus (%)
+    \"\"\"
+    if angka % 2 == 0:
+        return "GENAP"
+    else:
+        return "GANJIL"
 
-# SYARAT WAJIB: Seluruh modul praktikum 1-4 & operasi3 HARUS sudah selesai!
-import praktikum_01
-import praktikum_02
-import praktikum_03
-import praktikum_04
-import operasi3
+def hitung_deret_aritmatika(awal, beda, n):
+    \"\"\"
+    Menghitung total akumulasi deret menggunakan perulangan for
+    \"\"\"
+    total = 0
+    suku = awal
+    for i in range(n):
+        total += suku
+        suku += beda
+    return total"""
+
+TUGAS_KALKULATOR_CODE = """# ==============================================================================
+# PROGRAM UTAMA: kalkulator.py
+# Aplikasi Kalkulator Konsol Bermenu Interaktif
+# ==============================================================================
+import operasi3  # Memanggil modul fungsi terpisah
 
 while True:
-    print("\\n" + "=" * 48)
-    print("   APLIKASI TERPADU PRAKTIKUM & KALKULATOR")
-    print("=" * 48)
-    print("1. Evaluasi Kelulusan Mahasiswa (Praktikum 1)")
-    print("2. Uji Bilangan Prima (Praktikum 2)")
-    print("3. Hitung Deret Aritmatika & Total (Praktikum 3)")
-    print("4. Matriks Perkalian & Statistik List (Praktikum 4)")
-    print("5. Kalkulator Operasi Matematika (Modul operasi3)")
-    print("0. Keluar dari Program")
-    print("=" * 48)
-    
-    pilihan = input("Pilih Menu (0-5): ")
-    
-    if pilihan == "0":
-        print("Terima kasih! Sampai jumpa di praktikum berikutnya.")
+    print("\\n" + "=" * 45)
+    print("        APLIKASI KALKULATOR KONSOL")
+    print("=" * 45)
+    print("1. Operasi Aritmatika Dasar (+, -, *, /)")
+    print("2. Cek Sifat Bilangan (Ganjil / Genap)")
+    print("3. Hitung Deret Aritmatika (For & Akumulator)")
+    print("4. Cetak Tabel Perkalian Matriks (Nested Loop)")
+    print("5. Keluar")
+    print("=" * 45)
+
+    pilihan = input("Pilih menu (1-5): ")
+
+    # ----------------------------------------------------
+    # MENU 5: KELUAR PROGRAM
+    # ----------------------------------------------------
+    if pilihan == "5":
+        print("\\nTerima kasih telah menggunakan Kalkulator Konsol. Program selesai!")
         break
+
+    # ----------------------------------------------------
+    # MENU 1: OPERASI ARITMATIKA DASAR (+, -, *, /)
+    # ----------------------------------------------------
     elif pilihan == "1":
-        # TODO: Minta input kehadiran & nilai, panggil praktikum_01.evaluasi_kelulusan()
-        pass
+        print("\\n--- Sub-Menu Operasi Dasar ---")
+        print("A. Penjumlahan (+)")
+        print("B. Pengurangan (-)")
+        print("C. Perkalian   (*)")
+        print("D. Pembagian   (/)")
+        
+        op = input("Pilih operasi (A/B/C/D): ").upper()
+        
+        # Validasi pilihan operasi (Nested If)
+        if op in ["A", "B", "C", "D"]:
+            inp1 = input("Masukkan angka pertama : ")
+            inp2 = input("Masukkan angka kedua   : ")
+
+            # Validasi input menggunakan .isdigit() agar tidak crash
+            if inp1.isdigit() and inp2.isdigit():
+                a = int(inp1)
+                b = int(inp2)
+
+                if op == "A":
+                    hasil = operasi3.tambah(a, b)
+                    print(f"Hasil {a} + {b} = {hasil}")
+                elif op == "B":
+                    hasil = operasi3.kurang(a, b)
+                    print(f"Hasil {a} - {b} = {hasil}")
+                elif op == "C":
+                    hasil = operasi3.kali(a, b)
+                    print(f"Hasil {a} * {b} = {hasil}")
+                elif op == "D":
+                    hasil = operasi3.bagi(a, b)
+                    print(f"Hasil {a} / {b} = {hasil}")
+            else:
+                print("Peringatan: Masukan wajib berupa bilangan bulat!")
+        else:
+            print("Peringatan: Pilihan operasi tidak valid!")
+
+    # ----------------------------------------------------
+    # MENU 2: CEK SIFAT BILANGAN GANJIL / GENAP
+    # ----------------------------------------------------
     elif pilihan == "2":
-        # TODO: Minta input angka, panggil praktikum_02.cek_prima()
-        pass
+        print("\\n--- Cek Ganjil / Genap (Modulus %) ---")
+        inp_angka = input("Masukkan angka bulat positif: ")
+
+        if inp_angka.isdigit():
+            angka = int(inp_angka)
+            status = operasi3.cek_ganjil_genap(angka)
+            print(f"Hasil: Angka {angka} tergolong bilangan {status}")
+        else:
+            print("Peringatan: Masukan harus berupa angka murni!")
+
+    # ----------------------------------------------------
+    # MENU 3: HITUNG DERET ARITMATIKA (WHILE + FOR)
+    # ----------------------------------------------------
     elif pilihan == "3":
-        # TODO: Minta input awal, beda, banyak, panggil praktikum_03.hitung_deret()
-        pass
+        print("\\n--- Hitung Deret Aritmatika ---")
+        inp_a = input("Suku Pertama (a) : ")
+        inp_b = input("Beda Deret   (b) : ")
+        inp_n = input("Banyak Suku  (n) : ")
+
+        if inp_a.isdigit() and inp_b.isdigit() and inp_n.isdigit():
+            a = int(inp_a)
+            b = int(inp_b)
+            n = int(inp_n)
+
+            # Perulangan bersyarat while untuk memastikan n > 0
+            while n <= 0:
+                print("Peringatan: Banyak suku (n) harus lebih dari 0!")
+                n = int(input("Masukkan ulang banyak suku (n): "))
+
+            total_deret = operasi3.hitung_deret_aritmatika(a, b, n)
+            print(f"Total Jumlah Seluruh Deret = {total_deret}")
+        else:
+            print("Peringatan: Seluruh masukan wajib berupa angka bulat!")
+
+    # ----------------------------------------------------
+    # MENU 4: CETAK TABEL PERKALIAN MATRIKS (NESTED LOOP)
+    # ----------------------------------------------------
     elif pilihan == "4":
-        # TODO: Panggil praktikum_04.buat_matriks_perkalian() & analisis_list()
-        pass
-    elif pilihan == "5":
-        # TODO: Tampilkan submenu operasi (+, -, *, /) dan panggil fungsi di operasi3
-        pass
+        print("\\n--- Matriks Tabel Perkalian 1-3 (Nested Loop) ---")
+        # Loop luar mengatur perpindahan baris
+        for baris in range(1, 4):
+            # Loop dalam mencetak seluruh kolom sampai selesai
+            for kolom in range(1, 4):
+                print(f"{baris * kolom}\\t", end="")
+            print()  # Pindah ke baris baru
+
+    # ----------------------------------------------------
+    # KONDISI MENU TIDAK VALID
+    # ----------------------------------------------------
     else:
-        print("Peringatan: Menu tidak valid! Masukkan angka 0 - 5.")"""
+        print("Pilihan tidak valid! Silakan masukkan opsi 1 sampai 5.")"""
 
 
 def main():
@@ -367,8 +462,9 @@ def main():
         ("assets/code_praktikum_02.svg", lambda: generate_python_svg("praktikum_02.py", PRAKTIKUM_2_CODE)),
         ("assets/code_praktikum_03.svg", lambda: generate_python_svg("praktikum_03.py", PRAKTIKUM_3_CODE)),
         ("assets/code_praktikum_04.svg", lambda: generate_python_svg("praktikum_04.py", PRAKTIKUM_4_CODE)),
-        ("assets/code_operasi3_template.svg", lambda: generate_python_svg("operasi3.py (Kerangka Modul)", TUGAS_OPERASI3_SKELETON, "Tugas Mandiri • Ketik & Lengkapi")),
-        ("assets/code_tugas3_menu_template.svg", lambda: generate_python_svg("tugas3_menu.py (Kerangka Integrasi)", TUGAS_MENU_SKELETON, "Wajib Integrasi Praktikum 1-4")),
+        ("assets/code_operasi3_template.svg", lambda: generate_python_svg("operasi3.py", TUGAS_OPERASI3_CODE, "Tugas Mandiri 1 • Modul Fungsi")),
+        ("assets/code_kalkulator_template.svg", lambda: generate_python_svg("kalkulator.py", TUGAS_KALKULATOR_CODE, "Tugas Mandiri 2 • Aplikasi Kalkulator")),
+        ("assets/code_tugas3_menu_template.svg", lambda: generate_python_svg("tugas3_menu.py", TUGAS_KALKULATOR_CODE, "Tugas Mandiri 2 • Aplikasi Kalkulator")),
     ]
     
     for path, gen_fn in files_to_generate:

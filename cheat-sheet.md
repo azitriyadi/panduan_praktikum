@@ -6,7 +6,7 @@ Selamat datang di lembar contekan (*cheat sheet*) resmi praktikum **Python Lanju
 > ### 🛑 TATA TERTIB RESMI: DILARANG CURI START & SALIN OTOMATIS!
 > Seluruh kode praktikum dan tugas mandiri di bawah ini telah dikunci dan disajikan dalam format **Visual Code Card (SVG)**:
 > 1. **Tombol Salin Ditiadakan**: Tidak ada tombol *copy/salin* otomatis di halaman ini. Setiap kode **wajib diketik ulang secara manual (*tulis ulang*)** ke dalam teks editor (VS Code) untuk melatih pemahaman sintaksis dan *muscle memory*.
-> 2. **Tugas Mandiri Wajib Integrasi Praktikum 1–4**: Tugas mandiri (`tugas3_menu.py`) **tidak bisa dikerjakan terlebih dahulu atau mencuri start**, karena program utama mewajibkan integrasi (`import`) seluruh modul dari Praktikum 1, 2, 3, dan 4. Jika praktikum belum selesai, tugas mandiri akan gagal dieksekusi.
+> 2. **Tugas Mandiri (operasi3.py & kalkulator.py)**: Terdiri dari modul fungsi logika & matematika mandiri (`operasi3.py`) dan aplikasi kalkulator konsol bermenu interaktif (`kalkulator.py`) yang mengimpor modul tersebut serta mengimplementasikan validasi input dan nested loop.
 > 3. **Tunggu Instruksi Pemateri**: Buka menu lipat (*accordion*) hanya saat sesi modul tersebut resmi dipandu oleh dosen/asisten di depan kelas.
 
 ---
@@ -19,7 +19,7 @@ Gunakan tautan di bawah ini untuk melompat langsung ke sesi yang sedang berlangs
 - [3. Praktikum 2: Bilangan Prima & Break](#3-praktikum-2-bilangan-prima--break) (`praktikum_02.py`)
 - [4. Praktikum 3: Deret Aritmatika & Akumulator](#4-praktikum-3-deret-aritmatika--akumulator) (`praktikum_03.py`)
 - [5. Praktikum 4: Nested Loop & Manipulasi List](#5-praktikum-4-nested-loop--manipulasi-list) (`praktikum_04.py`)
-- [6. Tugas Mandiri: Dashboard Konsol Terintegrasi (Wajib Praktikum 1–4)](#6-tugas-mandiri-dashboard-konsol-terintegrasi-wajib-praktikum-14) (`operasi3.py` & `tugas3_menu.py`)
+- [6. Tugas Mandiri: Kalkulator Konsol Bermenu & Modul Operasi](#6-tugas-mandiri-kalkulator-konsol-bermenu--modul-operasi) (`operasi3.py` & `kalkulator.py`)
 - [7. Panduan Pengumpulan Tugas ke GitHub](#7-panduan-alur-pengumpulan-tugas-ke-github)
 
 ---
@@ -68,7 +68,7 @@ Pastikan berkas `.gitignore` diletakkan di dalam folder kerja mahasiswa kalian a
 <br>
 
 #### 💡 Poin Pembahasan Logika:
-1. **Fungsi Modular `evaluasi_kelulusan(kehadiran, nilai)`**: Mengembalikan status kelulusan dalam bentuk *string*. Fungsi ini nantinya akan diimpor dan dipanggil langsung oleh program menu tugas mandiri (`tugas3_menu.py`).
+1. **Fungsi Modular `evaluasi_kelulusan(kehadiran, nilai)`**: Mengembalikan status kelulusan dalam bentuk *string*. Konsep modularisasi ini memisahkan logika pemrosesan dari antarmuka interaktif.
 2. **Pintu Luar (`if kehadiran >= 12`)**: Berfungsi sebagai penyaring utama. Jika mahasiswa tidak memenuhi syarat kehadiran minimum, kondisi nilai ujian sama sekali tidak diperiksa.
 3. **Pintu Dalam (`if nilai >= 75`)**: Berjalan di dalam blok `if` pertama untuk menentukan apakah mahasiswa lulus memuaskan atau harus remedial.
 4. **Blok `if __name__ == "__main__":`**: Memastikan kode masukan interaktif hanya dijalankan ketika file `praktikum_01.py` dieksekusi langsung, dan tidak otomatis meminta input saat modul diimpor oleh tugas mandiri.
@@ -158,73 +158,69 @@ Pastikan berkas `.gitignore` diletakkan di dalam folder kerja mahasiswa kalian a
 
 ---
 
-## 6. Tugas Mandiri: Dashboard Konsol Terintegrasi (Wajib Praktikum 1–4)
+## 6. Tugas Mandiri: Kalkulator Konsol Bermenu & Modul Operasi
 
 > [!IMPORTANT]
-> ### 🚨 SYARAT MUTLAK: PRAKTIKUM 1 S/D 4 WAJIB SELESAI TERLEBIH DAHULU!
-> Tugas mandiri ini didesain sebagai **Proyek Integrasi Sistem**. Mahasiswa **DILARANG DAN TIDAK BISA CURI START**, karena program menu utama `tugas3_menu.py` **wajib mengimpor (*import*)** seluruh modul praktikum yang telah kalian selesaikan:
-> - `import praktikum_01` (Evaluasi Kelulusan)
-> - `import praktikum_02` (Uji Bilangan Prima)
-> - `import praktikum_03` (Deret Aritmatika & Akumulator)
-> - `import praktikum_04` (Matriks & List)
-> - `import operasi3` (Modul Operasi Matematika Kustom)
-> 
-> Jika salah satu berkas praktikum di atas belum kalian buat atau belum selesai, program `tugas3_menu.py` akan **langsung error (`ModuleNotFoundError`)** dan tidak dapat dijalankan!
+> ### 🚨 MODUL TUGAS MANDIRI
+> Tugas mandiri terdiri dari **2 berkas** yang saling terhubung:
+> 1. `operasi3.py`: Modul logika dan fungsi matematika murni (tanpa antarmuka input/print langsung).
+> 2. `kalkulator.py`: Program utama kalkulator konsol interaktif bermenu (`while True`) yang mengimpor (`import operasi3`), menjalankan *nested loop*, serta memvalidasi masukan menggunakan `.isdigit()`.
 
 Tugas mandiri terdiri dari **2 berkas** yang harus kalian selesaikan:
 
 ---
 
-### 📦 Berkas 1: Modul Operasi Matematika (`operasi3.py`)
-Modul ini bertindak sebagai pustaka fungsi matematika kustom yang berdiri sendiri tanpa program interaktif input/output.
+### 📦 Berkas 1: Modul Logika & Fungsi Matematika (`operasi3.py`)
+Modul fungsi mandiri (`def`) dengan nilai kembalian (`return`) murni tanpa antarmuka input/print langsung.
 
 <details>
-<summary><b>🔒 [KLIK UNTUK MELIHAT KERANGKA] Modul: operasi3.py</b></summary>
+<summary><b>🔒 [KLIK UNTUK MELIHAT KODE] Modul: operasi3.py</b></summary>
 
 <br>
 
-> ✍️ **Instruksi:** Buat berkas `operasi3.py`, ketik kerangka di bawah ini, lalu **lengkapi implementasi logikanya sendiri** (ganti blok `pass` dengan perhitungan yang benar).
+> ✍️ **Instruksi:** Buat berkas `operasi3.py`, ketik kode fungsi matematika mandiri di bawah ini secara teliti.
 
 <div align="center">
-  <img src="assets/code_operasi3_template.svg" alt="Kerangka Modul operasi3.py" width="100%" />
+  <img src="assets/code_operasi3_template.svg" alt="Modul operasi3.py" width="100%" />
 </div>
 
 <br>
 
-#### 📋 Spesifikasi Kebutuhan Fungsi `operasi3.py`:
-1. `hitung_tambah(a, b)`: Mengembalikan hasil $a + b$.
-2. `hitung_kurang(a, b)`: Mengembalikan hasil $a - b$.
-3. `hitung_kali(a, b)`: Mengembalikan hasil $a \times b$.
-4. `hitung_bagi(a, b)`: Memeriksa apakah $b == 0$. Jika ya, kembalikan pesan *string*: `"Error: Pembagi tidak boleh bernilai nol"`. Jika tidak nol, kembalikan hasil pembagian desimal $a / b$.
+#### 📋 Spesifikasi Fungsi Mandiri `operasi3.py`:
+1. `tambah(a, b)`: Mengembalikan hasil penjumlahan $a + b$.
+2. `kurang(a, b)`: Mengembalikan hasil pengurangan $a - b$.
+3. `kali(a, b)`: Mengembalikan hasil perkalian $a \times b$.
+4. `bagi(a, b)`: Mengembalikan hasil pembagian $a / b$. Menangani pencegahan error saat pembagi bernilai nol (`"Error: Pembagi tidak boleh bernilai nol!"`).
+5. `cek_ganjil_genap(angka)`: Memeriksa sifat bilangan ganjil atau genap menggunakan operator modulus (`%`), mengembalikan `"GENAP"` atau `"GANJIL"`.
+6. `hitung_deret_aritmatika(awal, beda, n)`: Menghitung total akumulasi deret menggunakan perulangan `for`.
 
 </details>
 
 ---
 
-### 💻 Berkas 2: Program Dashboard Menu Utama Terpadu (`tugas3_menu.py`)
-Program ini adalah menu utama berbasis perulangan `while True` yang menghubungkan seluruh praktikum dan modul matematika ke dalam satu dashboard interaktif.
+### 💻 Berkas 2: Program Utama Konsol Bermenu (`kalkulator.py`)
+Program aplikasi kalkulator konsol bermenu interaktif berbasis `while True` yang memanggil modul `operasi3`.
 
 <details>
-<summary><b>🔒 [KLIK UNTUK MELIHAT KERANGKA INTEGRASI] Berkas Utama: tugas3_menu.py</b></summary>
+<summary><b>🔒 [KLIK UNTUK MELIHAT KODE] Berkas Utama: kalkulator.py</b></summary>
 
 <br>
 
-> ✍️ **Instruksi:** Buat berkas `tugas3_menu.py`, ketik kerangka integrasi di bawah ini, lalu hubungkan setiap menu ke fungsi modul yang sesuai!
+> ✍️ **Instruksi:** Buat berkas `kalkulator.py`, ketik kode program utama di bawah ini, pastikan modul `operasi3.py` berada pada direktori yang sama!
 
 <div align="center">
-  <img src="assets/code_tugas3_menu_template.svg" alt="Kerangka Integrasi tugas3_menu.py" width="100%" />
+  <img src="assets/code_kalkulator_template.svg" alt="Program Utama kalkulator.py" width="100%" />
 </div>
 
 <br>
 
-#### 📋 Spesifikasi Logika Menu yang Wajib Kalian Lengkapi:
-* **Menu 1 (Praktikum 1)**: Meminta input kehadiran dan nilai dari pengguna, kemudian memanggil fungsi `praktikum_01.evaluasi_kelulusan(kehadiran, nilai)` dan mencetak hasilnya.
-* **Menu 2 (Praktikum 2)**: Meminta input angka bulat positif, lalu memanggil fungsi `praktikum_02.cek_prima(angka)` dan mencetak status prima/bukan prima.
-* **Menu 3 (Praktikum 3)**: Meminta input suku awal, beda, dan banyak suku, lalu memanggil `praktikum_03.hitung_deret(awal, beda, banyak)` dan menampilkan susunan deret serta total penjumlahannya.
-* **Menu 4 (Praktikum 4)**: Memanggil fungsi `praktikum_04.buat_matriks_perkalian(3)` dan `praktikum_04.analisis_list([85, 90, 78, 92, 88])`.
-* **Menu 5 (Modul operasi3)**: Meminta input dua angka serta pilihan operasi (+, -, *, /), lalu memanggil fungsi yang sesuai dari modul `operasi3`.
-* **Menu 0 (Keluar)**: Mencetak pesan terima kasih dan menghentikan perulangan program dengan perintah `break`.
-* **Penanganan Input Salah**: Jika pengguna memasukkan nomor menu selain 0–5, tampilkan peringatan: `"Peringatan: Menu tidak valid! Masukkan angka 0 - 5."`
+#### 📋 Spesifikasi Fitur Menu `kalkulator.py`:
+* **Menu 1 (Operasi Aritmatika Dasar)**: Menampilkan sub-menu operasi (A: Penjumlahan, B: Pengurangan, C: Perkalian, D: Pembagian). Menggunakan validasi `.isdigit()` dan memanggil fungsi `tambah`, `kurang`, `kali`, atau `bagi` dari `operasi3`.
+* **Menu 2 (Cek Sifat Bilangan)**: Menerima input bilangan bulat positif, memvalidasi dengan `.isdigit()`, dan memanggil `operasi3.cek_ganjil_genap(angka)`.
+* **Menu 3 (Hitung Deret Aritmatika)**: Menerima suku pertama ($a$), beda deret ($b$), dan banyak suku ($n$). Menerapkan perulangan bersyarat `while n <= 0` untuk validasi, lalu memanggil `operasi3.hitung_deret_aritmatika(a, b, n)`.
+* **Menu 4 (Cetak Tabel Perkalian Matriks)**: Menjalankan perulangan bersarang (*nested loop*) baris 1–3 dan kolom 1–3 untuk mencetak tabel perkalian matriks.
+* **Menu 5 (Keluar)**: Mencetak pesan terima kasih dan menghentikan perulangan program dengan `break`.
+* **Validasi Pilihan**: Menampilkan pesan peringatan jika pilihan di luar rentang menu 1 sampai 5.
 
 </details>
 
@@ -270,7 +266,26 @@ Pastikan seluruh berkas praktikum dan tugas mandiri berada lengkap di dalam fold
 - `praktikum_03.py`
 - `praktikum_04.py`
 - `operasi3.py`
-- `tugas3_menu.py`
+- `tugas3_menu.py` (atau `kalkulator.py`)
+
+#### 📝 Format Wajib Isi `README.md` Mahasiswa:
+Buat dan lengkapi berkas `README.md` di dalam folder kerja kalian persis mengikuti format berikut:
+
+````markdown
+# Tugas Minggu 2 - Pelatihan Python Lanjutan & GitHub
+
+- **Nama**     : [Nama Lengkap]
+- **NPM**      : [NPM Mahasiswa]
+- **Kelompok** : [Nomor Kelompok]
+
+## Daftar Berkas
+1. `praktikum_01.py` : Latihan Percabangan Bertingkat (Nested If)
+2. `praktikum_02.py` : Latihan Deteksi Bilangan Prima & Modulus
+3. `praktikum_03.py` : Latihan Deret Aritmatika & Akumulator
+4. `praktikum_04.py` : Latihan Matriks Perkalian & List
+5. `operasi3.py`     : Modul Operasi Matematika
+6. `tugas3_menu.py`  : Aplikasi Konsol Utama Kalkulator
+````
 
 ---
 
@@ -282,8 +297,8 @@ Disiplin riwayat *commit* menjadi penilaian kolaborasi. Jangan melakukan satu co
 git add praktikum_*.py
 git commit -m "feat: menyelesaikan modul latihan praktikum 1 sampai 4"
 
-# Commit 2: Menambahkan modul operasi matematika & dashboard menu integrasi
-git add operasi3.py tugas3_menu.py
+# Commit 2: Menambahkan modul operasi matematika & aplikasi kalkulator konsol
+git add operasi3.py kalkulator.py
 git commit -m "feat: menyelesaikan modul kalkulator dan program menu terpadu"
 
 # Commit 3: Menambahkan identitas diri dan konfigurasi gitignore
