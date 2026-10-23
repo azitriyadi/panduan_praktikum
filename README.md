@@ -16,23 +16,23 @@ Seluruh instruksi detail, materi, dan kode sumber latihan telah disiapkan dalam 
 
 > [!CAUTION]
 > ### 🛑 TATA TERTIB & PERINGATAN RESMI: DILARANG CURI START!
-> 1. **Kode Disembunyikan**: Seluruh kode latihan praktikum dan tugas mandiri di dalam [cheat-sheet.md](cheat-sheet.md) telah **dikunci dan disembunyikan** di balik menu lipat (*collapsible drop-down*).
-> 2. **Tunggu Aba-Aba**: **DILARANG KERAS** membuka menu lipat atau mengetik kode praktikum sebelum ada instruksi resmi dari dosen/pemateri di depan kelas!
-> 3. **Pahami Analogi & Logika**: Setiap sesi dibuka dengan penjelasan cara kerja logika kode menggunakan analogi visual di layar. Fokuslah pada fondasi berpikir komputasional.
-> 4. **Ketik Mandiri (*Muscle Memory*)**: Ketik kode secara langsung pada teks editor kalian. Hindari jalan pintas *copy-paste* agar terbiasa dengan sintaks dan penataan indentasi 4 spasi pada Python.
+> 1. **Tombol Salin Ditiadakan**: Seluruh kode latihan disajikan dalam bentuk **Visual Code Card (SVG)** tanpa tombol salin (*copy button*) bawaan. Mahasiswa **wajib mengetik ulang secara mandiri (*muscle memory*)** ke dalam teks editor VS Code.
+> 2. **Tugas Mandiri Wajib Menyelesaikan Praktikum 1–4**: Tugas mandiri (`tugas3_menu.py`) adalah **Aplikasi Dashboard Terpadu** yang mengimpor (`import`) modul dari Praktikum 1, 2, 3, dan 4. Mahasiswa **tidak bisa curi start** mengerjakan tugas mandiri sebelum seluruh berkas praktikum selesai!
+> 3. **Tunggu Aba-Aba**: Buka menu lipat (*drop-down*) hanya jika telah diinstruksikan secara resmi oleh pemateri di depan kelas.
+> 4. **Pahami Analogi & Alur Logika**: Pahami alur berpikir komputasional dan penataan indentasi 4 spasi pada Python.
 
 ---
 
 ## 🎯 Ringkasan Materi Praktikum
 
-| No | Modul / Praktikum | Berkas Target | Topik Bahasan |
+| No | Modul / Praktikum | Berkas Target | Topik Bahasan & Integrasi |
 |:---:|:---|:---|:---|
-| 1 | **Praktikum 1** | `praktikum_01.py` | *Nested If* (Evaluasi Kehadiran & Nilai Kelulusan) |
-| 2 | **Praktikum 2** | `praktikum_02.py` | Pengujian Bilangan Prima, Operator Modulus (`%`), dan `break` |
-| 3 | **Praktikum 3** | `praktikum_03.py` | Deret Aritmatika, Akumulator Nilai, dan Cetak Baris (`end=" "`) |
-| 4 | **Praktikum 4** | `praktikum_04.py` | Matriks 2D (*Nested Loop*) & Pengenalan Manipulasi `list` |
-| 5 | **Tugas Mandiri 1** | `operasi3.py` | Modul Fungsi Matematika Kustom |
-| 6 | **Tugas Mandiri 2** | `tugas3_menu.py` | Aplikasi Konsol Interaktif Berbasis Menu (`while True`) |
+| 1 | **Praktikum 1** | `praktikum_01.py` | *Nested If* Modular (Evaluasi Kehadiran & Nilai Kelulusan) |
+| 2 | **Praktikum 2** | `praktikum_02.py` | Pengujian Bilangan Prima, Operator Modulus (`%`), dan Berhenti Cepat |
+| 3 | **Praktikum 3** | `praktikum_03.py` | Deret Aritmatika & Akumulator Nilai (Pengembalian *Tuple*) |
+| 4 | **Praktikum 4** | `praktikum_04.py` | Matriks 2D (*Nested Loop*) & Analisis Statistik Wadah `list` |
+| 5 | **Tugas Mandiri 1** | `operasi3.py` | Modul Fungsi Matematika Kustom (Tambah, Kurang, Kali, Bagi) |
+| 6 | **Tugas Mandiri 2** | `tugas3_menu.py` | **Dashboard Menu Terpadu (Wajib Integrasi Praktikum 1–4 & Modul 1)** |
 
 ---
 

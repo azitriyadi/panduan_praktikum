@@ -1,0 +1,107 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 820 1092" width="100%" height="1092" style="max-width: 820px; border-radius: 10px; font-family: Consolas, 'Cascadia Code', 'Fira Code', monospace;">
+  <!-- Window Background -->
+  <rect width="820" height="1092" rx="10" fill="#181825" stroke="#313244" stroke-width="1.5"/>
+  <rect y="42" width="820" height="1050" fill="#1e1e2e"/>
+  <!-- Header Bar -->
+  <path d="M 0 10 Q 0 0 10 0 L 810 0 Q 820 0 820 10 L 820 42 L 0 42 Z" fill="#11111b" stroke="#313244" stroke-width="1"/>
+  <circle cx="20" cy="21" r="6" fill="#f38ba8"/>
+  <circle cx="38" cy="21" r="6" fill="#f9e2af"/>
+  <circle cx="56" cy="21" r="6" fill="#a6e3a1"/>
+  <text x="78" y="26" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="600" fill="#cdd6f4">tugas3_menu.py (Kerangka Integrasi)</text>
+  <!-- Anti Copy Badge -->
+  <rect x="585" y="9" width="220" height="24" rx="12" fill="#f38ba8" fill-opacity="0.12" stroke="#f38ba8" stroke-width="1" stroke-opacity="0.5"/>
+  <text x="695" y="25" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="11.5" font-weight="600" fill="#f38ba8">✍️ Wajib Integrasi Praktikum 1-4</text>
+  <line x1="52" y1="42" x2="52" y2="1092" stroke="#313244" stroke-width="1"/>
+  <text x="40" y="77" text-anchor="end" font-size="12" fill="#585b70" font-weight="normal">1</text>
+  <text x="65" y="77" font-size="13" xml:space="preserve"><tspan fill="#9399b2" font-style="italic"># ==========================================</tspan></text>
+  <text x="40" y="99" text-anchor="end" font-size="12" fill="#585b70" font-weight="normal">2</text>
+  <text x="65" y="99" font-size="13" xml:space="preserve"><tspan fill="#9399b2" font-style="italic"># TUGAS MANDIRI 2: DASHBOARD MENU TERPADU</tspan></text>
+  <text x="40" y="121" text-anchor="end" font-size="12" fill="#585b70" font-weight="normal">3</text>
+  <text x="65" y="121" font-size="13" xml:space="preserve"><tspan fill="#9399b2" font-style="italic"># Berkas: tugas3_menu.py (WAJIB DILENGKAPI SENDIRI)</tspan></text>
+  <text x="40" y="143" text-anchor="end" font-size="12" fill="#585b70" font-weight="normal">4</text>
+  <text x="65" y="143" font-size="13" xml:space="preserve"><tspan fill="#9399b2" font-style="italic"># ==========================================</tspan></text>
+  <text x="40" y="165" text-anchor="end" font-size="12" fill="#585b70" font-weight="normal">5</text>
+  <text x="65" y="165" font-size="13" fill="#cdd6f4" xml:space="preserve"></text>
+  <text x="40" y="187" text-anchor="end" font-size="12" fill="#585b70" font-weight="normal">6</text>
+  <text x="65" y="187" font-size="13" xml:space="preserve"><tspan fill="#9399b2" font-style="italic"># SYARAT WAJIB: Seluruh modul praktikum 1-4 &amp; operasi3 HARUS sudah selesai!</tspan></text>
+  <text x="40" y="209" text-anchor="end" font-size="12" fill="#585b70" font-weight="normal">7</text>
+  <text x="65" y="209" font-size="13" xml:space="preserve"><tspan fill="#cba6f7" font-weight="bold">import</tspan> <tspan fill="#cdd6f4">praktikum_01</tspan></text>
+  <text x="40" y="231" text-anchor="end" font-size="12" fill="#585b70" font-weight="normal">8</text>
+  <text x="65" y="231" font-size="13" xml:space="preserve"><tspan fill="#cba6f7" font-weight="bold">import</tspan> <tspan fill="#cdd6f4">praktikum_02</tspan></text>
+  <text x="40" y="253" text-anchor="end" font-size="12" fill="#585b70" font-weight="normal">9</text>
+  <text x="65" y="253" font-size="13" xml:space="preserve"><tspan fill="#cba6f7" font-weight="bold">import</tspan> <tspan fill="#cdd6f4">praktikum_03</tspan></text>
+  <text x="40" y="275" text-anchor="end" font-size="12" fill="#585b70" font-weight="normal">10</text>
+  <text x="65" y="275" font-size="13" xml:space="preserve"><tspan fill="#cba6f7" font-weight="bold">import</tspan> <tspan fill="#cdd6f4">praktikum_04</tspan></text>
+  <text x="40" y="297" text-anchor="end" font-size="12" fill="#585b70" font-weight="normal">11</text>
+  <text x="65" y="297" font-size="13" xml:space="preserve"><tspan fill="#cba6f7" font-weight="bold">import</tspan> <tspan fill="#cdd6f4">operasi3</tspan></text>
+  <text x="40" y="319" text-anchor="end" font-size="12" fill="#585b70" font-weight="normal">12</text>
+  <text x="65" y="319" font-size="13" fill="#cdd6f4" xml:space="preserve"></text>
+  <text x="40" y="341" text-anchor="end" font-size="12" fill="#585b70" font-weight="normal">13</text>
+  <text x="65" y="341" font-size="13" xml:space="preserve"><tspan fill="#cba6f7" font-weight="bold">while</tspan> <tspan fill="#cba6f7" font-weight="bold">True</tspan><tspan fill="#89dceb">:</tspan></text>
+  <text x="40" y="363" text-anchor="end" font-size="12" fill="#585b70" font-weight="normal">14</text>
+  <text x="65" y="363" font-size="13" xml:space="preserve"><tspan fill="#cdd6f4">    </tspan><tspan fill="#89b4fa">print</tspan><tspan fill="#89dceb">(</tspan><tspan fill="#a6e3a1">&quot;\n&quot;</tspan> <tspan fill="#89dceb">+</tspan> <tspan fill="#a6e3a1">&quot;=&quot;</tspan> <tspan fill="#89dceb">*</tspan> <tspan fill="#fab387">48</tspan><tspan fill="#89dceb">)</tspan></text>
+  <text x="40" y="385" text-anchor="end" font-size="12" fill="#585b70" font-weight="normal">15</text>
+  <text x="65" y="385" font-size="13" xml:space="preserve">    <tspan fill="#89b4fa">print</tspan><tspan fill="#89dceb">(</tspan><tspan fill="#a6e3a1">&quot;   APLIKASI TERPADU PRAKTIKUM &amp; KALKULATOR&quot;</tspan><tspan fill="#89dceb">)</tspan></text>
+  <text x="40" y="407" text-anchor="end" font-size="12" fill="#585b70" font-weight="normal">16</text>
+  <text x="65" y="407" font-size="13" xml:space="preserve">    <tspan fill="#89b4fa">print</tspan><tspan fill="#89dceb">(</tspan><tspan fill="#a6e3a1">&quot;=&quot;</tspan> <tspan fill="#89dceb">*</tspan> <tspan fill="#fab387">48</tspan><tspan fill="#89dceb">)</tspan></text>
+  <text x="40" y="429" text-anchor="end" font-size="12" fill="#585b70" font-weight="normal">17</text>
+  <text x="65" y="429" font-size="13" xml:space="preserve">    <tspan fill="#89b4fa">print</tspan><tspan fill="#89dceb">(</tspan><tspan fill="#a6e3a1">&quot;1. Evaluasi Kelulusan Mahasiswa (Praktikum 1)&quot;</tspan><tspan fill="#89dceb">)</tspan></text>
+  <text x="40" y="451" text-anchor="end" font-size="12" fill="#585b70" font-weight="normal">18</text>
+  <text x="65" y="451" font-size="13" xml:space="preserve">    <tspan fill="#89b4fa">print</tspan><tspan fill="#89dceb">(</tspan><tspan fill="#a6e3a1">&quot;2. Uji Bilangan Prima (Praktikum 2)&quot;</tspan><tspan fill="#89dceb">)</tspan></text>
+  <text x="40" y="473" text-anchor="end" font-size="12" fill="#585b70" font-weight="normal">19</text>
+  <text x="65" y="473" font-size="13" xml:space="preserve">    <tspan fill="#89b4fa">print</tspan><tspan fill="#89dceb">(</tspan><tspan fill="#a6e3a1">&quot;3. Hitung Deret Aritmatika &amp; Total (Praktikum 3)&quot;</tspan><tspan fill="#89dceb">)</tspan></text>
+  <text x="40" y="495" text-anchor="end" font-size="12" fill="#585b70" font-weight="normal">20</text>
+  <text x="65" y="495" font-size="13" xml:space="preserve">    <tspan fill="#89b4fa">print</tspan><tspan fill="#89dceb">(</tspan><tspan fill="#a6e3a1">&quot;4. Matriks Perkalian &amp; Statistik List (Praktikum 4)&quot;</tspan><tspan fill="#89dceb">)</tspan></text>
+  <text x="40" y="517" text-anchor="end" font-size="12" fill="#585b70" font-weight="normal">21</text>
+  <text x="65" y="517" font-size="13" xml:space="preserve">    <tspan fill="#89b4fa">print</tspan><tspan fill="#89dceb">(</tspan><tspan fill="#a6e3a1">&quot;5. Kalkulator Operasi Matematika (Modul operasi3)&quot;</tspan><tspan fill="#89dceb">)</tspan></text>
+  <text x="40" y="539" text-anchor="end" font-size="12" fill="#585b70" font-weight="normal">22</text>
+  <text x="65" y="539" font-size="13" xml:space="preserve">    <tspan fill="#89b4fa">print</tspan><tspan fill="#89dceb">(</tspan><tspan fill="#a6e3a1">&quot;0. Keluar dari Program&quot;</tspan><tspan fill="#89dceb">)</tspan></text>
+  <text x="40" y="561" text-anchor="end" font-size="12" fill="#585b70" font-weight="normal">23</text>
+  <text x="65" y="561" font-size="13" xml:space="preserve">    <tspan fill="#89b4fa">print</tspan><tspan fill="#89dceb">(</tspan><tspan fill="#a6e3a1">&quot;=&quot;</tspan> <tspan fill="#89dceb">*</tspan> <tspan fill="#fab387">48</tspan><tspan fill="#89dceb">)</tspan></text>
+  <text x="40" y="583" text-anchor="end" font-size="12" fill="#585b70" font-weight="normal">24</text>
+  <text x="65" y="583" font-size="13" fill="#cdd6f4" xml:space="preserve">    </text>
+  <text x="40" y="605" text-anchor="end" font-size="12" fill="#585b70" font-weight="normal">25</text>
+  <text x="65" y="605" font-size="13" xml:space="preserve">    <tspan fill="#cdd6f4">pilihan</tspan> <tspan fill="#89dceb">=</tspan> <tspan fill="#89b4fa">input</tspan><tspan fill="#89dceb">(</tspan><tspan fill="#a6e3a1">&quot;Pilih Menu (0-5): &quot;</tspan><tspan fill="#89dceb">)</tspan></text>
+  <text x="40" y="627" text-anchor="end" font-size="12" fill="#585b70" font-weight="normal">26</text>
+  <text x="65" y="627" font-size="13" fill="#cdd6f4" xml:space="preserve">    </text>
+  <text x="40" y="649" text-anchor="end" font-size="12" fill="#585b70" font-weight="normal">27</text>
+  <text x="65" y="649" font-size="13" xml:space="preserve">    <tspan fill="#cba6f7" font-weight="bold">if</tspan> <tspan fill="#cdd6f4">pilihan</tspan> <tspan fill="#89dceb">==</tspan> <tspan fill="#a6e3a1">&quot;0&quot;</tspan><tspan fill="#89dceb">:</tspan></text>
+  <text x="40" y="671" text-anchor="end" font-size="12" fill="#585b70" font-weight="normal">28</text>
+  <text x="65" y="671" font-size="13" xml:space="preserve"><tspan fill="#cdd6f4">        </tspan><tspan fill="#89b4fa">print</tspan><tspan fill="#89dceb">(</tspan><tspan fill="#a6e3a1">&quot;Terima kasih! Sampai jumpa di praktikum berikutnya.&quot;</tspan><tspan fill="#89dceb">)</tspan></text>
+  <text x="40" y="693" text-anchor="end" font-size="12" fill="#585b70" font-weight="normal">29</text>
+  <text x="65" y="693" font-size="13" xml:space="preserve">        <tspan fill="#cba6f7" font-weight="bold">break</tspan></text>
+  <text x="40" y="715" text-anchor="end" font-size="12" fill="#585b70" font-weight="normal">30</text>
+  <text x="65" y="715" font-size="13" xml:space="preserve">    <tspan fill="#cdd6f4"></tspan><tspan fill="#cba6f7" font-weight="bold">elif</tspan> <tspan fill="#cdd6f4">pilihan</tspan> <tspan fill="#89dceb">==</tspan> <tspan fill="#a6e3a1">&quot;1&quot;</tspan><tspan fill="#89dceb">:</tspan></text>
+  <text x="40" y="737" text-anchor="end" font-size="12" fill="#585b70" font-weight="normal">31</text>
+  <text x="65" y="737" font-size="13" xml:space="preserve">        <tspan fill="#9399b2" font-style="italic"># TODO: Minta input kehadiran &amp; nilai, panggil praktikum_01.evaluasi_kelulusan()</tspan></text>
+  <text x="40" y="759" text-anchor="end" font-size="12" fill="#585b70" font-weight="normal">32</text>
+  <text x="65" y="759" font-size="13" xml:space="preserve"><tspan fill="#cdd6f4">        </tspan><tspan fill="#cba6f7" font-weight="bold">pass</tspan></text>
+  <text x="40" y="781" text-anchor="end" font-size="12" fill="#585b70" font-weight="normal">33</text>
+  <text x="65" y="781" font-size="13" xml:space="preserve">    <tspan fill="#cdd6f4"></tspan><tspan fill="#cba6f7" font-weight="bold">elif</tspan> <tspan fill="#cdd6f4">pilihan</tspan> <tspan fill="#89dceb">==</tspan> <tspan fill="#a6e3a1">&quot;2&quot;</tspan><tspan fill="#89dceb">:</tspan></text>
+  <text x="40" y="803" text-anchor="end" font-size="12" fill="#585b70" font-weight="normal">34</text>
+  <text x="65" y="803" font-size="13" xml:space="preserve">        <tspan fill="#9399b2" font-style="italic"># TODO: Minta input angka, panggil praktikum_02.cek_prima()</tspan></text>
+  <text x="40" y="825" text-anchor="end" font-size="12" fill="#585b70" font-weight="normal">35</text>
+  <text x="65" y="825" font-size="13" xml:space="preserve"><tspan fill="#cdd6f4">        </tspan><tspan fill="#cba6f7" font-weight="bold">pass</tspan></text>
+  <text x="40" y="847" text-anchor="end" font-size="12" fill="#585b70" font-weight="normal">36</text>
+  <text x="65" y="847" font-size="13" xml:space="preserve">    <tspan fill="#cdd6f4"></tspan><tspan fill="#cba6f7" font-weight="bold">elif</tspan> <tspan fill="#cdd6f4">pilihan</tspan> <tspan fill="#89dceb">==</tspan> <tspan fill="#a6e3a1">&quot;3&quot;</tspan><tspan fill="#89dceb">:</tspan></text>
+  <text x="40" y="869" text-anchor="end" font-size="12" fill="#585b70" font-weight="normal">37</text>
+  <text x="65" y="869" font-size="13" xml:space="preserve">        <tspan fill="#9399b2" font-style="italic"># TODO: Minta input awal, beda, banyak, panggil praktikum_03.hitung_deret()</tspan></text>
+  <text x="40" y="891" text-anchor="end" font-size="12" fill="#585b70" font-weight="normal">38</text>
+  <text x="65" y="891" font-size="13" xml:space="preserve"><tspan fill="#cdd6f4">        </tspan><tspan fill="#cba6f7" font-weight="bold">pass</tspan></text>
+  <text x="40" y="913" text-anchor="end" font-size="12" fill="#585b70" font-weight="normal">39</text>
+  <text x="65" y="913" font-size="13" xml:space="preserve">    <tspan fill="#cdd6f4"></tspan><tspan fill="#cba6f7" font-weight="bold">elif</tspan> <tspan fill="#cdd6f4">pilihan</tspan> <tspan fill="#89dceb">==</tspan> <tspan fill="#a6e3a1">&quot;4&quot;</tspan><tspan fill="#89dceb">:</tspan></text>
+  <text x="40" y="935" text-anchor="end" font-size="12" fill="#585b70" font-weight="normal">40</text>
+  <text x="65" y="935" font-size="13" xml:space="preserve">        <tspan fill="#9399b2" font-style="italic"># TODO: Panggil praktikum_04.buat_matriks_perkalian() &amp; analisis_list()</tspan></text>
+  <text x="40" y="957" text-anchor="end" font-size="12" fill="#585b70" font-weight="normal">41</text>
+  <text x="65" y="957" font-size="13" xml:space="preserve"><tspan fill="#cdd6f4">        </tspan><tspan fill="#cba6f7" font-weight="bold">pass</tspan></text>
+  <text x="40" y="979" text-anchor="end" font-size="12" fill="#585b70" font-weight="normal">42</text>
+  <text x="65" y="979" font-size="13" xml:space="preserve">    <tspan fill="#cdd6f4"></tspan><tspan fill="#cba6f7" font-weight="bold">elif</tspan> <tspan fill="#cdd6f4">pilihan</tspan> <tspan fill="#89dceb">==</tspan> <tspan fill="#a6e3a1">&quot;5&quot;</tspan><tspan fill="#89dceb">:</tspan></text>
+  <text x="40" y="1001" text-anchor="end" font-size="12" fill="#585b70" font-weight="normal">43</text>
+  <text x="65" y="1001" font-size="13" xml:space="preserve">        <tspan fill="#9399b2" font-style="italic"># TODO: Tampilkan submenu operasi (+, -, *, /) dan panggil fungsi di operasi3</tspan></text>
+  <text x="40" y="1023" text-anchor="end" font-size="12" fill="#585b70" font-weight="normal">44</text>
+  <text x="65" y="1023" font-size="13" xml:space="preserve"><tspan fill="#cdd6f4">        </tspan><tspan fill="#cba6f7" font-weight="bold">pass</tspan></text>
+  <text x="40" y="1045" text-anchor="end" font-size="12" fill="#585b70" font-weight="normal">45</text>
+  <text x="65" y="1045" font-size="13" xml:space="preserve">    <tspan fill="#cdd6f4"></tspan><tspan fill="#cba6f7" font-weight="bold">else</tspan><tspan fill="#89dceb">:</tspan></text>
+  <text x="40" y="1067" text-anchor="end" font-size="12" fill="#585b70" font-weight="normal">46</text>
+  <text x="65" y="1067" font-size="13" xml:space="preserve"><tspan fill="#cdd6f4">        </tspan><tspan fill="#89b4fa">print</tspan><tspan fill="#89dceb">(</tspan><tspan fill="#a6e3a1">&quot;Peringatan: Menu tidak valid! Masukkan angka 0 - 5.&quot;</tspan><tspan fill="#89dceb">)</tspan></text>
+</svg>
