@@ -1,0 +1,827 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Panduan Praktikum: Python Lanjutan &amp; Kolaborasi GitHub</title>
+  <meta name="description" content="Panduan dan Cheat Sheet Praktikum Python Lanjutan serta Kolaborasi GitHub untuk Mahasiswa">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  
+  <style>
+    :root {
+      --bg-primary: #0f111a;
+      --bg-secondary: #161824;
+      --bg-card: #1c1f30;
+      --border-color: #2b3049;
+      --text-main: #e2e8f0;
+      --text-muted: #94a3b8;
+      --accent: #6366f1;
+      --accent-hover: #4f46e5;
+      --accent-glow: rgba(99, 102, 241, 0.25);
+      --danger: #ef4444;
+      --danger-bg: rgba(239, 68, 68, 0.12);
+      --warning: #f59e0b;
+      --warning-bg: rgba(245, 158, 11, 0.12);
+      --success: #10b981;
+      --success-bg: rgba(16, 185, 129, 0.12);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+      background-color: var(--bg-primary);
+      color: var(--text-main);
+      line-height: 1.65;
+      padding: 0;
+      margin: 0;
+      overflow-x: hidden;
+    }
+
+    /* Container & Layout */
+    .app-container {
+      display: flex;
+      min-height: 100vh;
+    }
+
+    /* Sidebar Navigation */
+    .sidebar {
+      width: 320px;
+      background: var(--bg-secondary);
+      border-right: 1px solid var(--border-color);
+      position: sticky;
+      top: 0;
+      height: 100vh;
+      overflow-y: auto;
+      padding: 28px 20px;
+      flex-shrink: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding-bottom: 20px;
+      border-bottom: 1px solid var(--border-color);
+    }
+
+    .brand-icon {
+      width: 42px;
+      height: 42px;
+      background: linear-gradient(135deg, #6366f1, #a855f7);
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 22px;
+      box-shadow: 0 4px 15px var(--accent-glow);
+    }
+
+    .brand-text h2 {
+      font-size: 16px;
+      font-weight: 700;
+      color: #fff;
+      line-height: 1.3;
+    }
+
+    .brand-text span {
+      font-size: 12px;
+      color: var(--text-muted);
+    }
+
+    .nav-label {
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      margin-bottom: 8px;
+    }
+
+    .nav-menu {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+
+    .nav-link {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding: 10px 14px;
+      border-radius: 8px;
+      color: var(--text-muted);
+      text-decoration: none;
+      font-size: 13.5px;
+      font-weight: 500;
+      transition: all 0.2s ease;
+      border: 1px solid transparent;
+    }
+
+    .nav-link:hover {
+      background: var(--bg-card);
+      color: #fff;
+      border-color: var(--border-color);
+    }
+
+    .nav-link.active {
+      background: var(--accent-glow);
+      color: #a5b4fc;
+      border-color: rgba(99, 102, 241, 0.4);
+      font-weight: 600;
+    }
+
+    .nav-icon {
+      font-size: 16px;
+    }
+
+    /* Main Content Area */
+    .main-content {
+      flex: 1;
+      padding: 40px 60px;
+      max-width: 1050px;
+      margin: 0 auto;
+    }
+
+    /* Header Banner */
+    .hero-banner {
+      background: linear-gradient(135deg, rgba(99, 102, 241, 0.15) 0%, rgba(168, 85, 247, 0.1) 100%);
+      border: 1px solid rgba(99, 102, 241, 0.3);
+      border-radius: 16px;
+      padding: 32px 36px;
+      margin-bottom: 36px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero-banner h1 {
+      font-size: 28px;
+      font-weight: 800;
+      color: #ffffff;
+      margin-bottom: 10px;
+      letter-spacing: -0.02em;
+    }
+
+    .hero-banner p {
+      font-size: 15px;
+      color: #cbd5e1;
+      max-width: 720px;
+    }
+
+    /* Alert / Caution Box */
+    .alert-box {
+      background: var(--danger-bg);
+      border: 1px solid rgba(239, 68, 68, 0.35);
+      border-radius: 12px;
+      padding: 20px 24px;
+      margin-bottom: 36px;
+      display: flex;
+      gap: 16px;
+      align-items: flex-start;
+    }
+
+    .alert-icon {
+      font-size: 26px;
+      flex-shrink: 0;
+    }
+
+    .alert-content h3 {
+      font-size: 16px;
+      font-weight: 700;
+      color: #fca5a5;
+      margin-bottom: 8px;
+    }
+
+    .alert-content ul {
+      margin-left: 18px;
+      color: #fecaca;
+      font-size: 14px;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+
+    /* Section Styles */
+    .section-card {
+      background: var(--bg-secondary);
+      border: 1px solid var(--border-color);
+      border-radius: 16px;
+      padding: 32px;
+      margin-bottom: 36px;
+      scroll-margin-top: 30px;
+    }
+
+    .section-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 18px;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .section-title {
+      font-size: 21px;
+      font-weight: 700;
+      color: #fff;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .badge-file {
+      background: rgba(99, 102, 241, 0.15);
+      border: 1px solid rgba(99, 102, 241, 0.4);
+      color: #a5b4fc;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 12px;
+      padding: 4px 10px;
+      border-radius: 6px;
+      font-weight: 600;
+    }
+
+    .section-desc {
+      font-size: 14.5px;
+      color: var(--text-muted);
+      margin-bottom: 24px;
+    }
+
+    /* Accordion / Details */
+    details {
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-radius: 12px;
+      overflow: hidden;
+      margin-bottom: 20px;
+      transition: all 0.2s ease;
+    }
+
+    details[open] {
+      border-color: rgba(99, 102, 241, 0.5);
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+    }
+
+    summary {
+      padding: 16px 20px;
+      font-size: 14.5px;
+      font-weight: 600;
+      color: #cbd5e1;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      user-select: none;
+      background: rgba(255, 255, 255, 0.02);
+      transition: background 0.2s;
+    }
+
+    summary:hover {
+      background: rgba(255, 255, 255, 0.05);
+      color: #fff;
+    }
+
+    summary::-webkit-details-marker {
+      display: none;
+    }
+
+    .summary-left {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .summary-badge {
+      font-size: 11px;
+      font-weight: 700;
+      padding: 3px 8px;
+      border-radius: 4px;
+      background: rgba(245, 158, 11, 0.15);
+      color: #fbbf24;
+      border: 1px solid rgba(245, 158, 11, 0.3);
+    }
+
+    .details-body {
+      padding: 24px;
+      border-top: 1px solid var(--border-color);
+      background: #11131f;
+    }
+
+    /* Image Wrapper (SVG Cards) */
+    .svg-wrapper {
+      width: 100%;
+      margin: 16px 0;
+      text-align: center;
+    }
+
+    .svg-wrapper img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 10px;
+      box-shadow: 0 8px 30px rgba(0, 0, 0, 0.5);
+      pointer-events: none; /* Disables dragging */
+      user-select: none;
+    }
+
+    /* Logic Breakdown List */
+    .logic-box {
+      margin-top: 20px;
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-radius: 10px;
+      padding: 20px;
+    }
+
+    .logic-box h4 {
+      font-size: 14px;
+      font-weight: 700;
+      color: #a5b4fc;
+      margin-bottom: 12px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .logic-box ol {
+      margin-left: 20px;
+      font-size: 13.5px;
+      color: #cbd5e1;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .logic-box code {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 12px;
+      background: rgba(255, 255, 255, 0.08);
+      padding: 2px 6px;
+      border-radius: 4px;
+      color: #f1f5f9;
+    }
+
+    /* Step Card (Git Alur) */
+    .step-list {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      margin-top: 16px;
+    }
+
+    .step-item {
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-radius: 10px;
+      padding: 18px 20px;
+    }
+
+    .step-title {
+      font-size: 14.5px;
+      font-weight: 700;
+      color: #fff;
+      margin-bottom: 6px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .step-desc {
+      font-size: 13.5px;
+      color: var(--text-muted);
+      margin-bottom: 12px;
+    }
+
+    .code-snippet {
+      background: #090a10;
+      border: 1px solid #1f2335;
+      border-radius: 8px;
+      padding: 12px 16px;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 12.5px;
+      color: #a6accd;
+      overflow-x: auto;
+    }
+
+    /* Mobile Menu Toggle */
+    .mobile-header {
+      display: none;
+      background: var(--bg-secondary);
+      border-bottom: 1px solid var(--border-color);
+      padding: 16px 20px;
+      align-items: center;
+      justify-content: space-between;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    .menu-btn {
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      color: #fff;
+      padding: 8px 12px;
+      border-radius: 6px;
+      font-size: 14px;
+      cursor: pointer;
+    }
+
+    @media (max-width: 900px) {
+      .app-container {
+        flex-direction: column;
+      }
+
+      .mobile-header {
+        display: flex;
+      }
+
+      .sidebar {
+        display: none;
+        width: 100%;
+        height: auto;
+        position: static;
+        border-right: none;
+        border-bottom: 1px solid var(--border-color);
+      }
+
+      .sidebar.open {
+        display: flex;
+      }
+
+      .main-content {
+        padding: 24px 16px;
+      }
+
+      .hero-banner {
+        padding: 24px 20px;
+      }
+
+      .hero-banner h1 {
+        font-size: 22px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Mobile Header -->
+  <div class="mobile-header">
+    <div style="display: flex; align-items: center; gap: 10px;">
+      <span style="font-size: 20px;">🐍</span>
+      <strong style="font-size: 15px; color: #fff;">Praktikum Python</strong>
+    </div>
+    <button class="menu-btn" onclick="toggleSidebar()">☰ Menu</button>
+  </div>
+
+  <div class="app-container">
+    
+    <!-- Sidebar Navigation -->
+    <aside class="sidebar" id="sidebar">
+      <div class="brand">
+        <div class="brand-icon">🐍</div>
+        <div class="brand-text">
+          <h2>Laboratorium Terpadu</h2>
+          <span>Python &amp; GitHub Workflow</span>
+        </div>
+      </div>
+
+      <div>
+        <div class="nav-label">Navigasi Halaman</div>
+        <ul class="nav-menu">
+          <li><a href="#tata-tertib" class="nav-link active"><span class="nav-icon">🛑</span> Tata Tertib</a></li>
+          <li><a href="#gitignore" class="nav-link"><span class="nav-icon">⚙️</span> Berkas .gitignore</a></li>
+          <li><a href="#prak1" class="nav-link"><span class="nav-icon">🧪</span> Praktikum 1: Nested If</a></li>
+          <li><a href="#prak2" class="nav-link"><span class="nav-icon">🔢</span> Praktikum 2: Bilangan Prima</a></li>
+          <li><a href="#prak3" class="nav-link"><span class="nav-icon">📈</span> Praktikum 3: Deret Aritmatika</a></li>
+          <li><a href="#prak4" class="nav-link"><span class="nav-icon">📊</span> Praktikum 4: Matriks &amp; List</a></li>
+          <li><a href="#tugas-mandiri" class="nav-link"><span class="nav-icon">🚀</span> Tugas Mandiri Terpadu</a></li>
+          <li><a href="#alur-git" class="nav-link"><span class="nav-icon">📤</span> Alur Pengumpulan Git</a></li>
+        </ul>
+      </div>
+
+      <div style="margin-top: auto; padding-top: 16px; border-top: 1px solid var(--border-color); font-size: 11.5px; color: var(--text-muted); text-align: center;">
+        Mode Pembelajaran Anti Copy-Paste<br>Ketik Ulang Manual • Muscle Memory
+      </div>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="main-content">
+      
+      <!-- Hero Banner -->
+      <div class="hero-banner">
+        <h1>📖 Panduan Resmi Praktikum Python Lanjutan</h1>
+        <p>Lembar panduan praktikum interaktif logika Python &amp; alur kerja kolaborasi Git industri (*fork, branch, commit bertahap, dan pull request*).</p>
+      </div>
+
+      <!-- Tata Tertib Alert -->
+      <section id="tata-tertib" class="alert-box">
+        <div class="alert-icon">🛑</div>
+        <div class="alert-content">
+          <h3>TATA TERTIB &amp; ATURAN RESMI: DILARANG CURI START!</h3>
+          <ul>
+            <li><strong>Tombol Salin Ditiadakan:</strong> Kode sengaja disajikan dalam format kartu visual (SVG). Tidak ada tombol salin otomatis agar kalian <em>mengetik ulang secara manual</em> ke VS Code untuk melatih pemahaman dan indentasi.</li>
+            <li><strong>Tugas Mandiri Wajib Integrasi Praktikum 1–4:</strong> Program utama tugas mandiri mengimpor modul praktikum 1–4. Jika praktikum belum selesai, tugas mandiri <em>tidak akan bisa dijalankan</em>.</li>
+            <li><strong>Tunggu Aba-Aba Pemateri:</strong> Buka menu lipat (*drop-down*) hanya saat dipandu oleh dosen/asisten di depan kelas.</li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- Section: .gitignore -->
+      <section id="gitignore" class="section-card">
+        <div class="section-header">
+          <div class="section-title"><span>⚙️</span> 1. Konfigurasi Berkas .gitignore</div>
+          <span class="badge-file">.gitignore</span>
+        </div>
+        <p class="section-desc">Mencegah berkas sampah cache internal Python dan preferensi teks editor terunggah ke repositori GitHub.</p>
+
+        <details>
+          <summary>
+            <div class="summary-left">
+              <span>📄</span>
+              <span>Lihat Template Berkas <code>.gitignore</code></span>
+            </div>
+            <span class="summary-badge">Ketik Ulang</span>
+          </summary>
+          <div class="details-body">
+            <div class="svg-wrapper">
+              <img src="assets/code_gitignore.svg" alt="Kode .gitignore">
+            </div>
+          </div>
+        </details>
+      </section>
+
+      <!-- Section: Praktikum 1 -->
+      <section id="prak1" class="section-card">
+        <div class="section-header">
+          <div class="section-title"><span>🧪</span> 2. Praktikum 1: Nested If (Evaluasi Kelulusan)</div>
+          <span class="badge-file">praktikum_01.py</span>
+        </div>
+        <p class="section-desc">Konsep percabangan bersarang (*Nested If*), gerbang validasi bertingkat (Kehadiran $\rightarrow$ Nilai Ujian), dan pembungkusan fungsi modular.</p>
+
+        <details>
+          <summary>
+            <div class="summary-left">
+              <span>🔒</span>
+              <span>[KLIK UNTUK MEMBUKA] Kode Praktikum 1</span>
+            </div>
+            <span class="summary-badge">Wajib Tulis Ulang</span>
+          </summary>
+          <div class="details-body">
+            <div class="svg-wrapper">
+              <img src="assets/code_praktikum_01.svg" alt="Kode Praktikum 1: Nested If">
+            </div>
+            <div class="logic-box">
+              <h4>💡 Poin Pembahasan Logika:</h4>
+              <ol>
+                <li><strong>Fungsi Modular <code>evaluasi_kelulusan(kehadiran, nilai)</code>:</strong> Mengembalikan status kelulusan. Fungsi ini nantinya akan diimpor dan dipanggil oleh tugas mandiri.</li>
+                <li><strong>Pintu Luar (<code>if kehadiran >= 12</code>):</strong> Penyaring utama. Jika kehadiran kurang dari 12, nilai ujian tidak diperiksa lagi.</li>
+                <li><strong>Blok <code>if __name__ == "__main__":</code>:</strong> Menjaga agar kode input tidak otomatis berjalan saat modul diimpor oleh tugas mandiri.</li>
+              </ol>
+            </div>
+          </div>
+        </details>
+      </section>
+
+      <!-- Section: Praktikum 2 -->
+      <section id="prak2" class="section-card">
+        <div class="section-header">
+          <div class="section-title"><span>🔢</span> 3. Praktikum 2: Bilangan Prima &amp; Break</div>
+          <span class="badge-file">praktikum_02.py</span>
+        </div>
+        <p class="section-desc">Pengujian bilangan prima, operator modulus (<code>%</code>), dan optimasi penghentian perulangan seketika saat faktor pembagi ditemukan.</p>
+
+        <details>
+          <summary>
+            <div class="summary-left">
+              <span>🔒</span>
+              <span>[KLIK UNTUK MEMBUKA] Kode Praktikum 2</span>
+            </div>
+            <span class="summary-badge">Wajib Tulis Ulang</span>
+          </summary>
+          <div class="details-body">
+            <div class="svg-wrapper">
+              <img src="assets/code_praktikum_02.svg" alt="Kode Praktikum 2: Bilangan Prima">
+            </div>
+            <div class="logic-box">
+              <h4>💡 Poin Pembahasan Logika:</h4>
+              <ol>
+                <li><strong>Fungsi <code>cek_prima(angka)</code>:</strong> Mengembalikan nilai boolean (<code>True</code>/<code>False</code>).</li>
+                <li><strong>Eliminasi Angka &lt; 2:</strong> Angka kurang dari 2 langsung dianggap bukan bilangan prima.</li>
+                <li><strong>Early Exit (Berhenti Cepat):</strong> Begitu sisa bagi nol (<code>angka % pembagi == 0</code>), langsung return <code>False</code> detik itu juga.</li>
+              </ol>
+            </div>
+          </div>
+        </details>
+      </section>
+
+      <!-- Section: Praktikum 3 -->
+      <section id="prak3" class="section-card">
+        <div class="section-header">
+          <div class="section-title"><span>📈</span> 4. Praktikum 3: Deret Aritmatika &amp; Akumulator</div>
+          <span class="badge-file">praktikum_03.py</span>
+        </div>
+        <p class="section-desc">Pola akumulator (celengan nilai), penambahan beda berulang, dan pengembalian multi-nilai (*tuple return*).</p>
+
+        <details>
+          <summary>
+            <div class="summary-left">
+              <span>🔒</span>
+              <span>[KLIK UNTUK MEMBUKA] Kode Praktikum 3</span>
+            </div>
+            <span class="summary-badge">Wajib Tulis Ulang</span>
+          </summary>
+          <div class="details-body">
+            <div class="svg-wrapper">
+              <img src="assets/code_praktikum_03.svg" alt="Kode Praktikum 3: Deret">
+            </div>
+            <div class="logic-box">
+              <h4>💡 Poin Pembahasan Logika:</h4>
+              <ol>
+                <li><strong>Fungsi <code>hitung_deret(awal, beda, banyak)</code>:</strong> Mengembalikan list deret suku dan total akumulasi penjumlahan.</li>
+                <li><strong>Akumulator (<code>total += suku</code>):</strong> Setiap putaran perulangan, nilai suku dimasukkan ke dalam total akumulasi.</li>
+              </ol>
+            </div>
+          </div>
+        </details>
+      </section>
+
+      <!-- Section: Praktikum 4 -->
+      <section id="prak4" class="section-card">
+        <div class="section-header">
+          <div class="section-title"><span>📊</span> 5. Praktikum 4: Nested Loop &amp; Manipulasi List</div>
+          <span class="badge-file">praktikum_04.py</span>
+        </div>
+        <p class="section-desc">Perulangan bersarang 2D untuk tabel perkalian matriks, karakter escape tabulasi (<code>\t</code>), dan fungsi agregasi <code>max()</code>.</p>
+
+        <details>
+          <summary>
+            <div class="summary-left">
+              <span>🔒</span>
+              <span>[KLIK UNTUK MEMBUKA] Kode Praktikum 4</span>
+            </div>
+            <span class="summary-badge">Wajib Tulis Ulang</span>
+          </summary>
+          <div class="details-body">
+            <div class="svg-wrapper">
+              <img src="assets/code_praktikum_04.svg" alt="Kode Praktikum 4: Nested Loop & List">
+            </div>
+            <div class="logic-box">
+              <h4>💡 Poin Pembahasan Logika:</h4>
+              <ol>
+                <li><strong>Outer Loop &amp; Inner Loop:</strong> Loop baris mengontrol pergerakan vertikal, loop kolom mencetak perkalian horizontal.</li>
+                <li><strong>Karakter Tabulasi <code>\t</code>:</strong> Menyejajarkan posisi kolom angka secara rapi.</li>
+                <li><strong>Agregasi <code>max(daftar_nilai)</code>:</strong> Mencari angka tertinggi secara instan.</li>
+              </ol>
+            </div>
+          </div>
+        </details>
+      </section>
+
+      <!-- Section: Tugas Mandiri -->
+      <section id="tugas-mandiri" class="section-card" style="border-color: rgba(99, 102, 241, 0.4);">
+        <div class="section-header">
+          <div class="section-title"><span>🚀</span> 6. Tugas Mandiri: Dashboard Konsol Terintegrasi</div>
+          <span class="badge-file">operasi3.py &amp; tugas3_menu.py</span>
+        </div>
+        <p class="section-desc">
+          <strong style="color: #fca5a5;">Wajib Menyelesaikan Praktikum 1–4!</strong> Program utama <code>tugas3_menu.py</code> mewajibkan integrasi modul seluruh praktikum. Kode jadi tidak diberikan secara langsung; mahasiswa wajib melengkapi logika rumpang sendiri.
+        </p>
+
+        <!-- Berkas 1: operasi3.py -->
+        <details>
+          <summary>
+            <div class="summary-left">
+              <span>📦</span>
+              <span>Berkas 1: Modul Operasi Matematika (<code>operasi3.py</code>)</span>
+            </div>
+            <span class="summary-badge">Kerangka Rumpang</span>
+          </summary>
+          <div class="details-body">
+            <div class="svg-wrapper">
+              <img src="assets/code_operasi3_template.svg" alt="Kerangka operasi3.py">
+            </div>
+            <div class="logic-box">
+              <h4>📋 Spesifikasi Fungsi:</h4>
+              <ol>
+                <li><code>hitung_tambah(a, b)</code>: Mengembalikan $a + b$.</li>
+                <li><code>hitung_kurang(a, b)</code>: Mengembalikan $a - b$.</li>
+                <li><code>hitung_kali(a, b)</code>: Mengembalikan $a \times b$.</li>
+                <li><code>hitung_bagi(a, b)</code>: Cek jika $b == 0$, kembalikan <code>"Error: Pembagi tidak boleh bernilai nol"</code>. Jika tidak nol, kembalikan $a / b$.</li>
+              </ol>
+            </div>
+          </div>
+        </details>
+
+        <!-- Berkas 2: tugas3_menu.py -->
+        <details>
+          <summary>
+            <div class="summary-left">
+              <span>💻</span>
+              <span>Berkas 2: Program Dashboard Utama (<code>tugas3_menu.py</code>)</span>
+            </div>
+            <span class="summary-badge">Wajib Import 1-4</span>
+          </summary>
+          <div class="details-body">
+            <div class="svg-wrapper">
+              <img src="assets/code_tugas3_menu_template.svg" alt="Kerangka tugas3_menu.py">
+            </div>
+            <div class="logic-box">
+              <h4>📋 Aturan Integrasi Menu:</h4>
+              <ol>
+                <li><strong>Menu 1:</strong> Meminta input kehadiran &amp; nilai, panggil <code>praktikum_01.evaluasi_kelulusan()</code>.</li>
+                <li><strong>Menu 2:</strong> Meminta input angka, panggil <code>praktikum_02.cek_prima()</code>.</li>
+                <li><strong>Menu 3:</strong> Meminta input awal, beda, banyak, panggil <code>praktikum_03.hitung_deret()</code>.</li>
+                <li><strong>Menu 4:</strong> Panggil <code>praktikum_04.buat_matriks_perkalian(3)</code> &amp; <code>analisis_list()</code>.</li>
+                <li><strong>Menu 5:</strong> Minta input operasi matematika, panggil fungsi di modul <code>operasi3</code>.</li>
+                <li><strong>Menu 0:</strong> Keluar program dengan <code>break</code>.</li>
+              </ol>
+            </div>
+          </div>
+        </details>
+      </section>
+
+      <!-- Section: Alur Git -->
+      <section id="alur-git" class="section-card">
+        <div class="section-header">
+          <div class="section-title"><span>📤</span> 7. Panduan Pengumpulan Tugas ke GitHub</div>
+          <span class="badge-file">Git Workflow</span>
+        </div>
+        <p class="section-desc">Lakukan langkah-langkah di bawah ini secara disiplin untuk mengumpulkan hasil tugas ke GitHub organisasi.</p>
+
+        <div class="step-list">
+          <div class="step-item">
+            <div class="step-title"><span>1️⃣</span> Fork Repositori Kelompok</div>
+            <div class="step-desc">Buka repositori organisasi di GitHub dan klik tombol <strong>Fork</strong> ke akun pribadi kalian.</div>
+          </div>
+
+          <div class="step-item">
+            <div class="step-title"><span>2️⃣</span> Clone ke Komputer Lokal</div>
+            <div class="step-desc">Buka terminal lalu ketik perintah clone:</div>
+            <div class="code-snippet">git clone https://github.com/USERNAME-KAMU/tugas-minggu-2.git<br>cd tugas-minggu-2</div>
+          </div>
+
+          <div class="step-item">
+            <div class="step-title"><span>3️⃣</span> Buat Folder Format <code>nama-NPM</code></div>
+            <div class="step-desc">Buat direktori kerja pribadi dan letakkan seluruh berkas tugas di dalamnya:</div>
+            <div class="code-snippet">mkdir ahmad-2610001<br>cd ahmad-2610001</div>
+          </div>
+
+          <div class="step-item">
+            <div class="step-title"><span>4️⃣</span> Minimal 3 Kali Commit Bertahap</div>
+            <div class="step-desc">Disiplin riwayat commit bertahap (*atomic commits*):</div>
+            <div class="code-snippet">git add praktikum_*.py<br>git commit -m "feat: menyelesaikan modul latihan praktikum 1 sampai 4"<br><br>git add operasi3.py tugas3_menu.py<br>git commit -m "feat: menyelesaikan modul kalkulator dan program menu terpadu"<br><br>git add README.md .gitignore<br>git commit -m "docs: melengkapi dokumentasi dan konfigurasi gitignore"</div>
+          </div>
+
+          <div class="step-item">
+            <div class="step-title"><span>5️⃣</span> Push dan Ajukan Pull Request</div>
+            <div class="step-desc">Unggah perubahan ke GitHub dan buka Pull Request ke repositori induk:</div>
+            <div class="code-snippet">git push origin main</div>
+          </div>
+        </div>
+      </section>
+
+      <footer style="text-align: center; color: var(--text-muted); font-size: 13px; padding: 40px 0 20px;">
+        © Laboratorium Terpadu • Praktikum Python Lanjutan &amp; Kolaborasi GitHub
+      </footer>
+
+    </main>
+  </div>
+
+  <script>
+    function toggleSidebar() {
+      const sidebar = document.getElementById('sidebar');
+      sidebar.classList.toggle('open');
+    }
+
+    // Active state highlighting on scroll
+    const sections = document.querySelectorAll('section');
+    const navLinks = document.querySelectorAll('.nav-link');
+
+    window.addEventListener('scroll', () => {
+      let current = '';
+      sections.forEach(section => {
+        const sectionTop = section.offsetTop;
+        const sectionHeight = section.clientHeight;
+        if (pageYOffset >= (sectionTop - 120)) {
+          current = section.getAttribute('id');
+        }
+      });
+
+      navLinks.forEach(link => {
+        link.classList.remove('active');
+        if (link.getAttribute('href') === `#${current}`) {
+          link.classList.add('active');
+        }
+      });
+    });
+  </script>
+</body>
+</html>
